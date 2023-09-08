@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }: any) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <main
-        className={`bg-gradient-to-br from-neutral-100 via-green-50 to-neutral-100 min-h-screen ${nunito.className}`}
+        className={`flex flex-col bg-gradient-to-br from-neutral-100 via-green-50 to-neutral-100 min-h-screen ${nunito.className}`}
       >
         <Navbar />
         <Component {...pageProps} />
