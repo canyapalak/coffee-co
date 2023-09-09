@@ -1,38 +1,83 @@
 import "tailwindcss/tailwind.css";
+import "../app/globals.css";
+import Image from "next/image";
+import imgCompany from "@/public/assets/images/home003.jpg";
+import beans01 from "@/public/assets/images/beans01.jpg";
+import beans02 from "@/public/assets/images/beans02.jpg";
+import beans03 from "@/public/assets/images/beans03.jpg";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="px-16 py-5">
-      <h1 className="text-green-600 text-2xl">Welcome Test Test</h1>
-      <p className="text-2xl">
-        At Coffee-Co, we are deeply committed to sourcing the finest coffee
-        beans from across the globe and skillfully roasting them to perfection.
-        Our mission is simple yet profound: to elevate your daily coffee ritual
-        by offering you a curated collection of high-quality, freshly roasted
-        beans that transport you to the far reaches of coffee-producing regions.
-      </p>
-      <br />
-      <p className="text-2xl">
-        Our adventure begins at the source, where we cultivate strong
-        relationships with dedicated coffee growers who share our passion for
-        excellence. We believe that great coffee begins with the finest beans,
-        nurtured by skilled hands and cultivated in the perfect climates. From
-        the misty highlands of Ethiopia to the lush plantations of Colombia, we
-        traverse the world's coffee heartlands to source beans that embody the
-        essence of their origins.
-      </p>
-      <br />
-      <p className="text-2xl">
-        Once in our care, these exceptional beans undergo a meticulous roasting
-        process by our master roasters, who bring out the unique flavors and
-        aromas that each coffee has to offer. The result? A symphony of taste, a
-        dance of aroma, and a celebration of the senses in every cup. Coffee-Co
-        is not just a coffee company; it's a destination for coffee
-        connoisseurs, a hub for coffee enthusiasts, and a trusted partner for
-        those who savor the richness of life, one cup at a time. Join us on this
-        flavorful journey as we explore the world, one coffee bean at a time.
-      </p>
-      <p className="text-6xl">Discover our amazing coffee blends</p>
+    <div className="px-24 py-5">
+      <div className="flex flex-row gap-10">
+        <div className="flex flex-col gap-5 w-5/12">
+          <div className="relative overflow-hidden rounded-xl">
+            <Image
+              src={imgCompany}
+              alt="Image"
+              className="shadow-lg opacity-90 hover:opacity-100 duration-500 
+              hover:scale-105 transition-[transform, shadow]"
+            />
+          </div>
+          <Link href="/company" className="ml-auto mr-auto">
+            <div
+              className="border-[1px] border-neutral-400 rounded-3xl items-center bg-neutral-50 px-5 
+            py-2 shadow-md hover:bg-red-100 transition-colors duration-300"
+            >
+              <p className="text-lg">Learn About the Company</p>
+            </div>
+          </Link>
+        </div>
+
+        <div className="flex flex-col gap-5 w-7/12 justify-between">
+          <div className="relative px-2">
+            <p
+              className={`text-2xl 2xl:text-3xl font-bold slide-in active text-justify`}
+            >
+              The best quality coffees from across the globe, professional
+              roasting and a remarkable tasting experience. Step into the world
+              of Coffee-Co and join us on this flavorful journey.
+            </p>
+          </div>
+          <div className="flex flex-col gap-5 ">
+            <div className="flex flex-row gap-5 justify-around  ml-auto mr-auto align-bottom w-11/12">
+              <div className="relative overflow-hidden rounded-xl w-1/3 ">
+                <Image
+                  src={beans01}
+                  alt="Image"
+                  className="shadow-lg opacity-90 hover:opacity-100 duration-500 
+               hover:scale-105 transition-[transform, shadow]"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-xl w-1/3 ">
+                <Image
+                  src={beans02}
+                  alt="Image"
+                  className="shadow-lg opacity-90 hover:opacity-100 duration-500 
+                hover:scale-105 transition-[transform, shadow]"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-xl w-1/3">
+                <Image
+                  src={beans03}
+                  alt="Image"
+                  className="shadow-lg opacity-90 hover:opacity-100 duration-500 
+                hover:scale-105 transition-[transform, shadow]"
+                />
+              </div>
+            </div>
+            <Link href="/company" className="ml-auto mr-auto">
+              <div
+                className="border-[1px] border-neutral-400 rounded-3xl items-center bg-neutral-50 px-5 
+              py-2 shadow-md hover:bg-red-100 transition-colors duration-300"
+              >
+                <p className="text-lg">Discover Our Coffee Beans</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

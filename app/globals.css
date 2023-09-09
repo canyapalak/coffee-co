@@ -2,26 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+main {
+background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  background-image: radial-gradient(49% 81% at 45% 47%, #F5FCEE45 0%, #EEF0EEFF 100%), radial-gradient(113% 91% at 17% -2%, #FAFDF8FF 1%, #FF000000 99%), radial-gradient(142% 91% at 83% 7%, #FCFCF6FF 1%, #FF000000 99%), radial-gradient(142% 91% at -6% 74%, #F7FBF5FF 1%, #FF000000 99%), radial-gradient(142% 91% at 111% 84%, #EAFCEAFF 2%, #F6FCEAFF 96%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+.slide-in {
+  animation: slideInFromTop 1s ease;
+}
