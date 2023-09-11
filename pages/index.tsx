@@ -44,30 +44,48 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-5 ">
               <div className="flex flex-row gap-5 justify-around  ml-auto mr-auto align-bottom w-11/12">
-                <div className="relative overflow-hidden rounded-xl w-1/3 ">
-                  <Image
-                    src={beans01}
-                    alt="Image"
-                    className="shadow-lg opacity-90 hover:opacity-100 duration-500 
-                 hover:scale-105 transition-[transform, shadow]"
-                  />
-                </div>
-                <div className="relative overflow-hidden rounded-xl w-1/3 ">
-                  <Image
-                    src={beans02}
-                    alt="Image"
-                    className="shadow-lg opacity-90 hover:opacity-100 duration-500 
-                  hover:scale-105 transition-[transform, shadow]"
-                  />
-                </div>
-                <div className="relative overflow-hidden rounded-xl w-1/3">
-                  <Image
-                    src={beans03}
-                    alt="Image"
-                    className="shadow-lg opacity-90 hover:opacity-100 duration-500 
-                  hover:scale-105 transition-[transform, shadow]"
-                  />
-                </div>
+                <Link href="/policy" className="w-1/3">
+                  <div className="relative overflow-hidden rounded-xl">
+                    <div className="group">
+                      <Image
+                        src={beans01}
+                        alt="Image"
+                        className="shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-105 duration-500 transition-[transform, shadow]"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <p className="text-yellow-100 text-4xl">Ethiopia</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/policy" className="w-1/3">
+                  <div className="relative overflow-hidden rounded-xl">
+                    <div className="group">
+                      <Image
+                        src={beans02}
+                        alt="Image"
+                        className="shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-105 duration-500 transition-[transform, shadow]"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <p className="text-yellow-100 text-4xl">Peru</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/policy" className="w-1/3">
+                  <div className="relative overflow-hidden rounded-xl">
+                    <div className="group">
+                      <Image
+                        src={beans03}
+                        alt="Image"
+                        className="shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-105 duration-500 transition-[transform, shadow]"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <p className="text-yellow-100 text-4xl">Brazil</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
               </div>
               <Link href="/company" className="ml-auto mr-auto">
                 <div
