@@ -13,9 +13,9 @@ export default function Policy() {
         />
         <div className="text-justify">
           <p className="text-lg">
-            At Coffee-Co, we are passionate about delivering not just a cup of
-            coffee but an entire experience that revolves around our three core
-            values: <span className="font-bold underline">Fair</span>,{" "}
+            We are passionate about delivering not just a cup of coffee but an
+            entire experience that revolves around our three core values:{" "}
+            <span className="font-bold underline">Fair</span>,{" "}
             <span className="font-bold underline">Friendly</span>, and{" "}
             <span className="font-bold underline">Fresh</span>. These principles
             are the bedrock of our commitment to providing you with the finest
