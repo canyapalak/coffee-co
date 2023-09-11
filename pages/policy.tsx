@@ -15,11 +15,11 @@ export default function Policy() {
           <p className="text-lg">
             At Coffee-Co, we are passionate about delivering not just a cup of
             coffee but an entire experience that revolves around our three core
-            values: <span className="font-extrabold underline">Fair</span>,{" "}
-            <span className="font-extrabold underline">Friendly</span>, and{" "}
-            <span className="font-extrabold underline">Fresh</span>. These
-            principles are the bedrock of our commitment to providing you with
-            the finest coffee beans from around the world.
+            values: <span className="font-bold underline">Fair</span>,{" "}
+            <span className="font-bold underline">Friendly</span>, and{" "}
+            <span className="font-bold underline">Fresh</span>. These principles
+            are the bedrock of our commitment to providing you with the finest
+            coffee beans from around the world.
           </p>
           <br />
           <p className="text-lg">

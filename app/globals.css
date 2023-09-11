@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 main {
-background-size: 100% 100%;
-  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-  background-image: radial-gradient(49% 81% at 45% 47%, #F5FCEE45 0%, #EEF0EEFF 100%), radial-gradient(113% 91% at 17% -2%, #FAFDF8FF 1%, #FF000000 99%), radial-gradient(142% 91% at 83% 7%, #FCFCF6FF 1%, #FF000000 99%), radial-gradient(142% 91% at -6% 74%, #F7FBF5FF 1%, #FF000000 99%), radial-gradient(142% 91% at 111% 84%, #EAFCEAFF 2%, #F6FCEAFF 96%);
+background: rgb(236, 236, 236);
+  background: linear-gradient(336deg, rgba(236, 236, 236, 1) 33%, rgba(241, 246, 227, 1) 71%);
 }
 
 @keyframes slideInFromTop {

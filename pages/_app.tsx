@@ -5,7 +5,7 @@ import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import "@/app/globals.css";
 
-const spartan = League_Spartan({ weight: ["300"], subsets: ["latin"] });
+const spartan = League_Spartan({ subsets: ["latin"] });
 
 export default function MyApp({ Component, pageProps }: any) {
   return (

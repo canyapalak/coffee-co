@@ -1,16 +1,15 @@
 import "tailwindcss/tailwind.css";
-import Image from "next/image";
 
 export default function Company() {
   return (
     <div className="px-24 py-5 mb-20">
       <p className="text-lg">
-        At <span className="font-extrabold underline">Coffee-Co</span>, we are
-        deeply committed to sourcing the finest coffee beans from across the
-        globe and skillfully roasting them to perfection. Our mission is simple
-        yet profound: to elevate your daily coffee ritual by offering you a
-        curated collection of high-quality, freshly roasted beans that transport
-        you to the far reaches of coffee-producing regions.
+        At <span className="font-bold underline">Coffee-Co</span>, we are deeply
+        committed to sourcing the finest coffee beans from across the globe and
+        skillfully roasting them to perfection. Our mission is simple yet
+        profound: to elevate your daily coffee ritual by offering you a curated
+        collection of high-quality, freshly roasted beans that transport you to
+        the far reaches of coffee-producing regions.
       </p>
       <br />
       <p className="text-lg">

@@ -19,7 +19,7 @@ export default function Home() {
               <Image
                 src={imgCompany}
                 alt="Image"
-                className="shadow-lg opacity-90 hover:opacity-100 duration-500 
+                className="shadow-lg opacity-80 hover:opacity-100 duration-500 
                 hover:scale-105 transition-[transform, shadow]"
               />
             </div>
@@ -36,7 +36,7 @@ export default function Home() {
           <div className="flex flex-col gap-5 w-7/12 justify-between">
             <div className="relative px-2">
               <p
-                className={`text-2xl 2xl:text-3xl font-bold slide-in active text-justify`}
+                className={`text-2xl 2xl:text-3xl slide-in active text-justify font-light`}
               >
                 The best quality coffees from across the globe, professional
                 roasting and a remarkable tasting experience. Step into the
@@ -51,7 +51,7 @@ export default function Home() {
                       <Image
                         src={beans01}
                         alt="Image"
-                        className="shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-105 duration-500 transition-[transform, shadow]"
+                        className="shadow-lg opacity-80 group-hover:opacity-100 group-hover:scale-105 duration-500 transition-[transform, shadow]"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         <p className="text-yellow-100 text-4xl">Ethiopia</p>
@@ -65,7 +65,7 @@ export default function Home() {
                       <Image
                         src={beans02}
                         alt="Image"
-                        className="shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-105 duration-500 transition-[transform, shadow]"
+                        className="shadow-lg opacity-80 group-hover:opacity-100 group-hover:scale-105 duration-500 transition-[transform, shadow]"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         <p className="text-yellow-100 text-4xl">Brazil</p>
@@ -79,7 +79,7 @@ export default function Home() {
                       <Image
                         src={beans03}
                         alt="Image"
-                        className="shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-105 duration-500 transition-[transform, shadow]"
+                        className="shadow-lg opacity-80 group-hover:opacity-100 group-hover:scale-105 duration-500 transition-[transform, shadow]"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         <p className="text-yellow-100 text-4xl">Peru</p>
@@ -101,7 +101,7 @@ export default function Home() {
         </div>
         <div className="mt-10 text-center ml-auto mr-auto w-2/3 mb-5">
           <Image src={leaf} alt="Leaf" className="w-8 h-8 inline-block" />
-          <p className="font-bold text-xl inline-block">
+          <p className="text-xl inline-block">
             Read our 3F Policy and see how passionate we are about delivering
             not just a cup of coffee but an entire experience that revolves
             around our three core values.
@@ -117,7 +117,7 @@ export default function Home() {
         </div>
         <div className="text-center ml-auto mr-auto w-2/3 mb-24">
           <Image src={truck} alt="Leaf" className="w-8 h-8 inline-block" />
-          <p className="font-bold text-xl inline-block">
+          <p className="text-xl inline-block">
             We deliver to any European destination and the best part is,
             shipping is free for your orders over 100€. Real coffee lovers stock
             up their coffee.
