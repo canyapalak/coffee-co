@@ -26,7 +26,7 @@ export default function Shop() {
               <p>{prod.name}</p>
               <p>{prod.int}</p>
               <p>{prod.gr}</p>
-              <p>{prod.price} €</p>
+              <p>{prod.price}€</p>
             </div>
           </div>
         ))}
