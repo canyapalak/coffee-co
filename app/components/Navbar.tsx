@@ -3,6 +3,7 @@ import logo from "@/public/assets/images/logo001.png";
 import "tailwindcss/tailwind.css";
 import Link from "next/link";
 import leaf from "@/public/assets/images/leaf2.png";
+import cart from "@/public/assets/images/cart01.png";
 
 export default function Navbar() {
   return (
@@ -20,13 +21,13 @@ export default function Navbar() {
           </Link>
           <Link href="/policy" className="hover:text-stone-600 flex flex-row">
             3F
-            <Image src={leaf} alt="leaf" className="w-6 h-6" />
+            <Image src={leaf} alt="Leaf" className="w-6 h-6" />
           </Link>
-          <Link href="/" className="hover:text-stone-600">
+          <Link href="/shop" className="hover:text-stone-600">
             Shop
           </Link>
           <Link href="/" className="hover:text-stone-600">
-            Cart
+            <Image src={cart} alt="Cart" className="w-6 h-6" />
           </Link>
         </div>
       </div>

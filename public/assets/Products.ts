@@ -1,3 +1,5 @@
+import { Product } from "@/app/types/index";
+
 export const products: Product[] = [
   {
     id: 1,

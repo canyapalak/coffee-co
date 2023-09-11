@@ -67,7 +67,7 @@ export default function Home() {
                         className="shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-105 duration-500 transition-[transform, shadow]"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <p className="text-yellow-100 text-4xl">Peru</p>
+                        <p className="text-yellow-100 text-4xl">Brazil</p>
                       </div>
                     </div>
                   </div>
@@ -81,13 +81,13 @@ export default function Home() {
                         className="shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-105 duration-500 transition-[transform, shadow]"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <p className="text-yellow-100 text-4xl">Brazil</p>
+                        <p className="text-yellow-100 text-4xl">Peru</p>
                       </div>
                     </div>
                   </div>
                 </Link>
               </div>
-              <Link href="/company" className="ml-auto mr-auto">
+              <Link href="/shop" className="ml-auto mr-auto">
                 <div
                   className="border-[1px] border-neutral-400 rounded-3xl items-center bg-neutral-50 px-5 
                 py-2 shadow-md hover:bg-green-100 transition-colors duration-300"
