@@ -3,14 +3,15 @@ import logo from "@/public/assets/images/logo001.png";
 import "tailwindcss/tailwind.css";
 import Link from "next/link";
 import leaf from "@/public/assets/images/leaf2.png";
-import cartEmpty from "@/public/assets/images/cart01.png";
-import cartFull from "@/public/assets/images/cart02.png";
+import cartEmpty from "@/public/assets/images/carticon02.png";
+import cartFull from "@/public/assets/images/carticon01.png";
 import { CartProducts } from "../types";
-import { useState } from "react";
+import { useCart } from "../contexts/CartContext";
 
-export default function Navbar({ cart }: CartProducts) {
+export default function Navbar() {
+  const { cart }: CartProducts = useCart();
   const isCartEmpty = cart ? cart.length === 0 : true;
-  const [show, setShow] = useState<boolean>(false);
+  console.log("cart Navbar :>> ", cart);
 
   return (
     <>

@@ -1,8 +1,10 @@
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
 import { CartProducts, Product } from "@/app/types";
+import { useCart } from "@/app/contexts/CartContext";
 
-export default function CartPage({ cart }: CartProducts) {
+export default function CartPage() {
+  const { cart }: CartProducts = useCart();
   const isCartEmpty = cart ? cart.length === 0 : true;
   console.log("cartPage Cart", cart);
 
