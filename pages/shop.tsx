@@ -23,19 +23,19 @@ export default function Shop({}) {
         <Link
           href={`/shop/${prod.id}`}
           key={prod.id}
-          className="group flex flex-col flex-wrap bg-white ml-auto mr-auto text-center 
-            rounded-xl shadow-xl items-center py-8 w-1/5 border-neutral-200 border-[1px] hover:scale-105 transition-transform duration-300"
+          className="group flex flex-col flex-wrap bg-gradient-to-br from-stone-300 to-stone-100 ml-auto mr-auto text-center 
+            rounded-xl shadow-xl items-center py-5 w-1/5 border-stone-300 border-[1px] hover:scale-105 transition-transform duration-300"
         >
-          <div className="relative overflow-hidden w-36 ml-auto mr-auto bg-white p-5 rounded-xl">
+          <div className="relative overflow-hidden ml-auto mr-auto p-3 rounded-xl">
             <Image
               src={prod.img}
               alt="Product"
               width={200}
-              height={280}
-              className=" transform-gpu w-24 h-36"
+              height={250}
+              className=" transform-gpu w-28 h-48"
             />
           </div>
-          <div className="">
+          <div className="mb-3">
             <p className="text-xl font-semibold">{prod.name}</p>
             <p>{showIntensity(prod.int)}</p>
             <p>{prod.gr} gr</p>

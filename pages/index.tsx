@@ -45,7 +45,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-5 ">
               <div className="flex flex-row gap-5 justify-around  ml-auto mr-auto align-bottom w-11/12">
-                <Link href="/policy" className="w-1/3">
+                <Link href="/shop/3" className="w-1/3">
                   <div className="relative overflow-hidden rounded-xl">
                     <div className="group">
                       <Image
@@ -59,7 +59,7 @@ export default function Home() {
                     </div>
                   </div>
                 </Link>
-                <Link href="/policy" className="w-1/3">
+                <Link href="/shop/1" className="w-1/3">
                   <div className="relative overflow-hidden rounded-xl">
                     <div className="group">
                       <Image
@@ -73,7 +73,7 @@ export default function Home() {
                     </div>
                   </div>
                 </Link>
-                <Link href="/policy" className="w-1/3">
+                <Link href="/shop/5" className="w-1/3">
                   <div className="relative overflow-hidden rounded-xl">
                     <div className="group">
                       <Image

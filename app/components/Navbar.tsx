@@ -3,8 +3,8 @@ import logo from "@/public/assets/images/logo001.png";
 import "tailwindcss/tailwind.css";
 import Link from "next/link";
 import leaf from "@/public/assets/images/leaf2.png";
-import cartEmpty from "@/public/assets/images/carticon02.png";
-import cartFull from "@/public/assets/images/carticon01.png";
+import cartEmpty from "@/public/assets/images/cart01.png";
+import cartFull from "@/public/assets/images/cart02.png";
 
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";

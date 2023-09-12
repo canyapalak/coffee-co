@@ -12,17 +12,18 @@ export default function ProductDetail({ product }: { product: Product }) {
 
   return (
     <div className="px-24 py-5 mb-20">
-      <div className="flex flex-row mr-auto ml-auto w-3/5 bg-white rounded-xl shadow-xl p-10 border-neutral-200 border-[1px] ">
-        <div className="w-2/5 m-auto">
+      <div className="flex flex-row mr-auto ml-auto w-3/5 bg-gradient-to-br from-stone-300 to-stone-100 rounded-xl shadow-xl p-5 border-stone-300 border-[1px] ">
+        <div className="w-2/6 m-auto relative overflow-hidden">
           <Image
             src={product.img}
             alt={product.name}
             width={200}
             height={250}
-            className="mr-auto ml-auto"
+            className="mr-auto ml-auto w-44 h-72 duration-500 
+                hover:scale-105 transition-[transform]"
           />
         </div>
-        <div className="pl-6 w-3/4 text-lg">
+        <div className="pl-4 w-4/6 text-lg">
           <h1 className="text-2xl font-semibold">{product.name}</h1>
           <div className="mt-2">
             {Array.from({ length: product.int }, (_, index) => (
