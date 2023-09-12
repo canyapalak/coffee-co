@@ -32,7 +32,7 @@ export default function Shop({}) {
               alt="Product"
               width={200}
               height={250}
-              className=" transform-gpu w-28 h-48"
+              className=" transform-gpu w-28 h-44"
             />
           </div>
           <div className="mb-3">

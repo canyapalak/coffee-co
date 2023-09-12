@@ -8,46 +8,53 @@ import Link from "next/link";
 export default function CartPage() {
   const { cart } = useContext(CartContext) || { cart: [] };
   const isCartEmpty = cart ? cart.length === 0 : true;
-  console.log("cartPage Cart", cart);
 
   return (
     <div className="px-24 py-5 mb-20 text-lg">
       {isCartEmpty ? (
-        <div className="flex flex-col gap-6 items-center ml-auto mr-auto mt-16  ">
-          <p className="text-xl ">Your cart is empty.</p>
-          <Link href="/shop" className="ml-auto mr-auto">
-            <div
-              className="border-[1px] border-neutral-400 rounded-3xl bg-neutral-50 px-5 
-                py-2 shadow-md hover:bg-green-100 transition-colors duration-300  inline-block mt-3"
-            >
-              <p className="text-lg">Start Shopping</p>
+        <div className="flex flex-col gap-6 items-center mx-auto mt-10">
+          <p className="text-xl">Your Shopping Cart is empty.</p>
+          <Link href="/shop">
+            <div className="border-[1px] border-neutral-400 rounded-3xl bg-neutral-50 px-5 py-2 shadow-md hover:bg-green-100 transition-colors duration-300 inline-block mt-3 text-lg mx-auto">
+              Start Shopping
             </div>
           </Link>
         </div>
       ) : (
-        <div>
-          {cart.map((cartProd: Product) => (
-            <div
-              key={cartProd.id}
-              className="group flex flex-col flex-wrap bg-white ml-auto mr-auto text-center 
-            rounded-xl shadow-xl items-center py-8 w-1/5 border-neutral-200 border-[1px] hover:scale-105 transition-transform duration-300"
-            >
-              <div className="relative overflow-hidden w-36 ml-auto mr-auto bg-white p-5 rounded-xl">
-                <Image
-                  src={cartProd.img}
-                  alt="Product"
-                  width={200}
-                  height={280}
-                  className=" transform-gpu w-24 h-36"
-                />
+        <div className="flex flex-col mx-auto items-center mt-10">
+          <p className="text-xl mb-5">Your Shopping Cart</p>
+          <div
+            className="bg-gradient-to-br from-stone-50 to-stone-100 rounded-xl shadow-xl px-14 py-4
+           border-stone-300 border-[1px] "
+          >
+            {cart.map((cartProd: Product) => (
+              <div>
+                <div
+                  key={cartProd.id}
+                  className="h-32 flex flex-row items-center gap-28"
+                >
+                  <div>
+                    <Image
+                      src={cartProd.img}
+                      alt="Product"
+                      width={100}
+                      height={150}
+                      className="w-16 h-24"
+                    />
+                  </div>
+                  <div className="mr-auto">
+                    <p className="">{cartProd.name}</p>
+                  </div>
+                  <div className="ml-auto">
+                    <p className="">{cartProd.price}€</p>
+                  </div>
+                </div>
+                <div>
+                  <hr className="border-1 border-stone-400" />
+                </div>
               </div>
-              <div className="">
-                <p className="text-xl font-semibold">{cartProd.name}</p>
-                <p>{cartProd.gr} gr</p>
-                <p>{cartProd.price}€</p>
-              </div>
-            </div>
-          ))}{" "}
+            ))}
+          </div>
         </div>
       )}
     </div>
