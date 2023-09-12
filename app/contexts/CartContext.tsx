@@ -1,7 +1,9 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { CartContextType, Product } from "../types";
 
-const CartContext = createContext<CartContextType | undefined>(undefined);
+export const CartContext = createContext<CartContextType | undefined>(
+  undefined
+);
 
 interface CartProviderProps {
   children: ReactNode;

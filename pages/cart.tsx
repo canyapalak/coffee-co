@@ -7,7 +7,7 @@ export default function CartPage({ cart }: CartProducts) {
   console.log("cartPage Cart", cart);
 
   return (
-    <div className="flex flex-wrap gap-8 px-24 py-5 mb-20 text-lg">
+    <div className="px-24 py-5 mb-20 text-lg">
       {isCartEmpty ? (
         <div>
           <p>Cart is empty</p>
