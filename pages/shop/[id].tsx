@@ -1,13 +1,14 @@
 import { products } from "@/public/assets/Products";
-import { Product } from "@/app/types/index";
+import { CartProducts, Product } from "@/app/types/index";
 import intenseIcon from "@/public/assets/images/intense-icon.png";
 import leftArrow from "@/public/assets/images/left-arrow.png";
 import Image from "next/image";
 import Link from "next/link";
-import { useCart } from "@/app/contexts/CartContext";
+import { CartContext } from "@/app/contexts/CartContext";
+import { useContext } from "react";
 
 export default function ProductDetail({ product }: { product: Product }) {
-  const { cart, addToCart } = useCart();
+  const { cart, addToCart } = useContext(CartContext) || { cart: [] };
 
   return (
     <div className="px-24 py-5 mb-20">
@@ -59,7 +60,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           />
         </Link>
         <Link href="/shop" className="inline-block">
-          <p className="inline-block">Back to Products</p>
+          <p className="inline-block text-lg">Back to Products</p>
         </Link>
       </div>
     </div>

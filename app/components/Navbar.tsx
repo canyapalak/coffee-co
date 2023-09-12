@@ -5,11 +5,12 @@ import Link from "next/link";
 import leaf from "@/public/assets/images/leaf2.png";
 import cartEmpty from "@/public/assets/images/carticon02.png";
 import cartFull from "@/public/assets/images/carticon01.png";
-import { CartProducts } from "../types";
-import { useCart } from "../contexts/CartContext";
+
+import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
 
 export default function Navbar() {
-  const { cart }: CartProducts = useCart();
+  const { cart } = useContext(CartContext) || { cart: [] };
   const isCartEmpty = cart ? cart.length === 0 : true;
   console.log("cart Navbar :>> ", cart);
 

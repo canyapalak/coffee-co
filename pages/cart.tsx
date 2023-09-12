@@ -1,18 +1,28 @@
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
-import { CartProducts, Product } from "@/app/types";
-import { useCart } from "@/app/contexts/CartContext";
+import { Product } from "@/app/types";
+import { CartContext } from "@/app/contexts/CartContext";
+import { useContext } from "react";
+import Link from "next/link";
 
 export default function CartPage() {
-  const { cart }: CartProducts = useCart();
+  const { cart } = useContext(CartContext) || { cart: [] };
   const isCartEmpty = cart ? cart.length === 0 : true;
   console.log("cartPage Cart", cart);
 
   return (
     <div className="px-24 py-5 mb-20 text-lg">
       {isCartEmpty ? (
-        <div>
-          <p>Cart is empty</p>
+        <div className="flex flex-col gap-6 items-center ml-auto mr-auto mt-16  ">
+          <p className="text-xl ">Your cart is empty.</p>
+          <Link href="/shop" className="ml-auto mr-auto">
+            <div
+              className="border-[1px] border-neutral-400 rounded-3xl bg-neutral-50 px-5 
+                py-2 shadow-md hover:bg-green-100 transition-colors duration-300  inline-block mt-3"
+            >
+              <p className="text-lg">Start Shopping</p>
+            </div>
+          </Link>
         </div>
       ) : (
         <div>
