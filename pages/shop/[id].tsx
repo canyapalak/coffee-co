@@ -12,7 +12,7 @@ export default function ProductDetail({ product }: { product: Product }) {
 
   return (
     <div className="px-24 py-5 mb-20">
-      <div className="flex flex-row mr-auto ml-auto w-3/5 bg-gradient-to-br from-stone-300 to-stone-100 rounded-xl shadow-xl p-5 border-stone-300 border-[1px] ">
+      <div className="flex flex-row mr-auto ml-auto w-3/5 bg-gradient-to-br from-stone-50 to-stone-100 rounded-xl shadow-xl p-8 border-stone-300 border-[1px] ">
         <div className="w-2/6 m-auto relative overflow-hidden">
           <Image
             src={product.img}
