@@ -3,9 +3,13 @@ import logo from "@/public/assets/images/logo001.png";
 import "tailwindcss/tailwind.css";
 import Link from "next/link";
 import leaf from "@/public/assets/images/leaf2.png";
-import cart from "@/public/assets/images/cart01.png";
+import cartEmpty from "@/public/assets/images/cart01.png";
+import cartFull from "@/public/assets/images/cart02.png";
+import { CartProducts } from "../types";
 
-export default function Navbar() {
+export default function Navbar({ cart }: CartProducts) {
+  const isCartEmpty = cart ? cart.length === 0 : true;
+
   return (
     <>
       <div className="flex align-middle px-24 py-5 mb-10">
@@ -26,9 +30,15 @@ export default function Navbar() {
           <Link href="/shop" className="hover:text-stone-600">
             Shop
           </Link>
-          <Link href="/" className="hover:text-stone-600">
-            <Image src={cart} alt="Cart" className="w-6 h-6" />
-          </Link>
+          {isCartEmpty ? (
+            <Link href="/cart">
+              <Image src={cartEmpty} alt="Cart" className="w-6 h-6" />
+            </Link>
+          ) : (
+            <Link href="/cart">
+              <Image src={cartFull} alt="Cart" className="w-6 h-6" />
+            </Link>
+          )}
         </div>
       </div>
     </>

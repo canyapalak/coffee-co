@@ -4,7 +4,7 @@ import intenseIcon from "@/public/assets/images/intense-icon.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Shop() {
+export default function Shop({}) {
   function showIntensity(intensity: number) {
     return Array.from({ length: intensity }, (_, index) => (
       <Image

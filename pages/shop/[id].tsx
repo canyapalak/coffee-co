@@ -4,8 +4,11 @@ import intenseIcon from "@/public/assets/images/intense-icon.png";
 import leftArrow from "@/public/assets/images/left-arrow.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useCart } from "@/app/contexts/CartContext";
 
 export default function ProductDetail({ product }: { product: Product }) {
+  const { cart, addToCart } = useCart();
+
   return (
     <div className="px-24 py-5 mb-20">
       <div className="flex flex-row mr-auto ml-auto w-3/5 bg-white rounded-xl shadow-xl p-10 border-neutral-200 border-[1px] ">
@@ -39,10 +42,11 @@ export default function ProductDetail({ product }: { product: Product }) {
           <p>{product.text}</p>
           <br />
           <div
-            className="border-[1px] border-neutral-400 rounded-3xl bg-neutral-50 px-4 
-                py-1 shadow-md hover:bg-green-100 transition-colors duration-300  inline-block"
+            className="border-[1px] border-neutral-400 rounded-3xl bg-neutral-50 px-4 py-1 shadow-md
+             hover:bg-green-100 transition-colors duration-300  inline-block cursor-pointer"
+            onClick={() => addToCart(product)}
           >
-            <p className="text-base ">Add to Cart</p>
+            <p className="text-base">Add to Cart</p>
           </div>
         </div>
       </div>

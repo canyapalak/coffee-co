@@ -7,3 +7,12 @@ export interface Product {
   int: number;
   text: string;
 }
+
+export interface CartProducts {
+  cart: Product[];
+}
+
+export interface CartContextType {
+  cart: Product[];
+  addToCart: (product: Product) => void;
+}
