@@ -8,7 +8,9 @@ import { CartContext } from "@/app/contexts/CartContext";
 import { useContext } from "react";
 
 export default function ProductDetail({ product }: { product: Product }) {
-  const { cart, addToCart } = useContext(CartContext) || { cart: [] };
+  const cartContext = useContext(CartContext);
+  const addToCart = cartContext?.addToCart || (() => {});
+  const { cart } = cartContext || { cart: [] };
 
   return (
     <div className="px-24 py-5 mb-20">
