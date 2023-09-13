@@ -6,7 +6,9 @@ import { useContext } from "react";
 import Link from "next/link";
 
 export default function CartPage() {
+  const cartContext = useContext(CartContext);
   const { cart } = useContext(CartContext) || { cart: [] };
+  const addToCart = cartContext?.addToCart || (() => {});
   const isCartEmpty = cart ? cart.length === 0 : true;
 
   return (
@@ -27,12 +29,21 @@ export default function CartPage() {
             className="bg-gradient-to-br from-stone-50 to-stone-100 rounded-xl shadow-xl px-14 py-4
            border-stone-300 border-[1px] "
           >
-            {cart.map((cartProd: Product) => (
+            {cart.map((cartProd: Product, index: number) => (
               <div>
                 <div
-                  key={cartProd.id}
-                  className="h-32 flex flex-row items-center gap-28"
+                  key={index}
+                  className="h-32 flex flex-row items-center gap-20"
                 >
+                  <div className="flex flex-row gap-2 ">
+                    <div className="bg-white rounded-xl shadow-md px-3 text-xl cursor-pointer">
+                      <p>-</p>
+                    </div>
+                    <p className="">{cartProd.qty}</p>
+                    <div className="bg-white rounded-xl shadow-md px-3 text-xl cursor-pointer">
+                      <p>+</p>
+                    </div>
+                  </div>
                   <div>
                     <Image
                       src={cartProd.img}

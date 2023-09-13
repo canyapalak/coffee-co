@@ -14,8 +14,18 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
 
   console.log("cart :>> ", cart);
 
-  const addToCart = (product: Product) => {
-    setCart([...cart, product]);
+  const addToCart = (productToAdd: Product) => {
+    const existingProductIndex = cart.findIndex(
+      (item) => item.id === productToAdd.id
+    );
+
+    if (existingProductIndex !== -1) {
+      const updatedCart = [...cart];
+      updatedCart[existingProductIndex].qty += 1;
+      setCart(updatedCart);
+    } else {
+      setCart([...cart, { ...productToAdd, qty: 1 }]);
+    }
   };
 
   return (

@@ -8,6 +8,7 @@ export const products: Product[] = [
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545733/pack06-removebg-preview_b2msec.png",
     price: 33,
     int: 4,
+    qty: 0,
     text: "Indulge in the bold and robust flavors of our Dark Horse blend sourced from the lush coffee plantations of Brazil. This exquisite coffee offers a rich, full-bodied taste with subtle hints of cocoa and nuts. It's perfect for those who crave a deep and satisfying coffee experience.",
   },
   {
@@ -17,6 +18,7 @@ export const products: Product[] = [
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545733/pack02-removebg-preview_hgzei1.png",
     price: 33,
     int: 3,
+    qty: 0,
     text: "Embark on a journey to the heart of Colombia with our Windy Day blend. This coffee boasts bright acidity and a delightful fruitiness, reminiscent of rainforest paradise. With its vibrant flavor profile, it's the ideal choice for those seeking a taste of exotic adventure in every cup.",
   },
   {
@@ -26,16 +28,18 @@ export const products: Product[] = [
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545732/pack01-removebg-preview_hl0p4s.png",
     price: 39,
     int: 2,
+    qty: 0,
     text: "Start your day with the ethereal flavors of Morning Bliss, a coffee blend straight from the highlands of Ethiopia. Known for its bright citrus notes and floral undertones, this coffee is like a morning symphony for your taste buds, providing a refreshing and invigorating start to your day.",
   },
   {
     id: 4,
-    name: "'Far Oasis' – Yemen",
+    name: "'Ancient Forest' – Honduras",
     gr: 250,
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545733/pack03-removebg-preview_vlsddd.png",
     price: 39,
     int: 2,
-    text: "Discover tranquility in a cup with our Far Oasis blend, originating from the serene landscapes of Yemen. This coffee offers a unique combination of spiciness and earthiness, creating a harmonious blend that soothes the soul. It's a true oasis of flavor amidst the chaos of your day.",
+    qty: 0,
+    text: "Discover tranquility in a cup with our Ancient Forest blend, originating from the thick rainforests of Honduras. This coffee offers a unique combination of spiciness and earthiness, creating a harmonious blend that soothes the soul. It's a true peace stop of flavor amidst the chaos of your day.",
   },
   {
     id: 5,
@@ -44,6 +48,7 @@ export const products: Product[] = [
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545733/pack04-removebg-preview_u2h0yj.png",
     price: 37,
     int: 3,
+    qty: 0,
     text: "Delight in the golden treasures of the Peruvian coffee fields with our Golden Harvest blend. This medium-roast coffee features a smooth and balanced profile with subtle notes of caramel and nuts. It's a comforting and reliable choice for coffee enthusiasts.",
   },
   {
@@ -53,6 +58,7 @@ export const products: Product[] = [
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545733/pack05-removebg-preview_fr8r3s.png",
     price: 37,
     int: 4,
+    qty: 0,
     text: "Experience the vibrant and spicy flavors of Africa with our African Spice blend, sourced exclusively from Kenya. This coffee boasts a lively acidity and bold flavors of black currant and spices. It's a true celebration of African coffee culture.",
   },
   {
@@ -62,6 +68,7 @@ export const products: Product[] = [
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545734/pack08-removebg-preview_qqdka3.png",
     price: 35,
     int: 3,
+    qty: 0,
     text: "Our Coffee-Co Special blend is a carefully crafted masterpiece that brings together beans from various regions. This complex blend offers a well-rounded flavor profile with hints of chocolate, caramel, and a touch of citrus. It's a crowd-pleaser that caters to a wide range of coffee preferences.",
   },
   {
@@ -71,6 +78,7 @@ export const products: Product[] = [
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545734/pack07-removebg-preview_wiipkc.png",
     price: 35,
     int: 3,
+    qty: 0,
     text: "For those who prefer to savor the rich taste of coffee without the caffeine, our Coffee-Co Decaf blend is the perfect choice. It retains the same exceptional flavor profile as our regular special blend, with the added benefit of being caffeine-free. Enjoy the warmth and comfort of coffee anytime, day or night, without the jolt.",
   },
 ];

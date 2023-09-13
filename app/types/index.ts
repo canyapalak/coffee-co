@@ -6,6 +6,7 @@ export interface Product {
   price: number;
   int: number;
   text: string;
+  qty: number;
 }
 
 export interface CartProducts {
