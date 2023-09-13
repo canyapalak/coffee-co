@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useState, ReactNode } from "react";
 import { CartContextType, Product } from "../types";
 
 export const CartContext = createContext<CartContextType | undefined>(
@@ -14,6 +14,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
 
   console.log("cart :>> ", cart);
 
+  // ADDING ITEMS TO CART BY ONE
   const addToCart = (productToAdd: Product) => {
     const existingProductIndex = cart.findIndex(
       (item) => item.id === productToAdd.id
@@ -28,8 +29,43 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     }
   };
 
+  // REMOVING ITEMS FROM CART BY ONE
+  const removeFromCart = (productToAdd: Product) => {
+    const existingProductIndex = cart.findIndex(
+      (item) => item.id === productToAdd.id
+    );
+
+    if (existingProductIndex !== -1) {
+      const updatedCart = [...cart];
+      const currentQty = updatedCart[existingProductIndex].qty;
+
+      if (currentQty > 1) {
+        updatedCart[existingProductIndex].qty -= 1;
+      } else {
+        updatedCart.splice(existingProductIndex, 1);
+      }
+
+      setCart(updatedCart);
+    }
+  };
+
+  // REMOVING THE WHOLE ITEM
+  const deleteFromCart = (productToAdd: Product) => {
+    const updatedCart = cart.map((item) => {
+      if (item.id === productToAdd.id) {
+        return { ...item, qty: 0 };
+      }
+      return item;
+    });
+
+    const filteredCart = updatedCart.filter((item) => item.qty > 0);
+    setCart(filteredCart);
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, deleteFromCart }}
+    >
       {children}
     </CartContext.Provider>
   );

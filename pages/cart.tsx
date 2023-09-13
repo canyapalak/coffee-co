@@ -4,11 +4,14 @@ import { Product } from "@/app/types";
 import { CartContext } from "@/app/contexts/CartContext";
 import { useContext } from "react";
 import Link from "next/link";
+import leftArrow from "@/public/assets/images/left-arrow.png";
 
 export default function CartPage() {
   const cartContext = useContext(CartContext);
   const { cart } = useContext(CartContext) || { cart: [] };
   const addToCart = cartContext?.addToCart || (() => {});
+  const removeFromCart = cartContext?.removeFromCart || (() => {});
+  const deleteFromCart = cartContext?.deleteFromCart || (() => {});
   const isCartEmpty = cart ? cart.length === 0 : true;
 
   return (
@@ -17,7 +20,10 @@ export default function CartPage() {
         <div className="flex flex-col gap-6 items-center mx-auto mt-10">
           <p className="text-xl">Your Shopping Cart is empty.</p>
           <Link href="/shop">
-            <div className="border-[1px] border-neutral-400 rounded-3xl bg-neutral-50 px-5 py-2 shadow-md hover:bg-green-100 transition-colors duration-300 inline-block mt-3 text-lg mx-auto">
+            <div
+              className="border-[1px] border-neutral-400 rounded-3xl bg-neutral-50 px-5 py-2 shadow-md 
+            hover:bg-green-100 transition-colors duration-300 inline-block mt-3 text-lg mx-auto"
+            >
               Start Shopping
             </div>
           </Link>
@@ -36,11 +42,19 @@ export default function CartPage() {
                   className="h-32 flex flex-row items-center gap-20"
                 >
                   <div className="flex flex-row gap-2 ">
-                    <div className="bg-white rounded-xl shadow-md px-3 text-xl cursor-pointer">
+                    <div
+                      className="bg-white rounded-xl shadow-md px-3 text-xl cursor-pointer
+                       active:text-neutral-400 transition-transform duration-200"
+                      onClick={() => removeFromCart(cartProd)}
+                    >
                       <p>-</p>
                     </div>
                     <p className="">{cartProd.qty}</p>
-                    <div className="bg-white rounded-xl shadow-md px-3 text-xl cursor-pointer">
+                    <div
+                      className="bg-white rounded-xl shadow-md px-3 text-xl cursor-pointer
+                       active:text-neutral-400 transition-transform duration-200"
+                      onClick={() => addToCart(cartProd)}
+                    >
                       <p>+</p>
                     </div>
                   </div>
@@ -57,7 +71,14 @@ export default function CartPage() {
                     <p className="">{cartProd.name}</p>
                   </div>
                   <div className="ml-auto">
-                    <p className="">{cartProd.price}€</p>
+                    <p className="">{cartProd.qty * cartProd.price}€</p>
+                  </div>
+                  <div
+                    className="bg-red-300 rounded-xl shadow-md px-3 text-xl cursor-pointer
+                     active:text-neutral-400 transition-transform duration-200"
+                    onClick={() => deleteFromCart(cartProd)}
+                  >
+                    <p>x</p>
                   </div>
                 </div>
                 <div>
@@ -68,6 +89,18 @@ export default function CartPage() {
           </div>
         </div>
       )}
+      <div className="flex items-center justify-center mt-10 gap-2">
+        <Link href="/shop" className="inline-block">
+          <Image
+            src={leftArrow}
+            alt="Left Arrow"
+            className="w-5 h-5 mb-1 inline-block"
+          />
+        </Link>
+        <Link href="/shop" className="inline-block">
+          <p className="inline-block text-lg">Continue Shopping</p>
+        </Link>
+      </div>
     </div>
   );
 }
