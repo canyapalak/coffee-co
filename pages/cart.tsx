@@ -32,8 +32,9 @@ export default function CartPage() {
           <p className="text-xl">Your Shopping Cart is empty.</p>
           <Link href="/shop">
             <div
-              className="border-[1px] border-neutral-400 rounded-3xl bg-neutral-50 px-5 py-2 shadow-md 
-            hover:bg-green-100 transition-colors duration-300 inline-block mt-3 text-lg mx-auto"
+              className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 px-5 py-2 shadow-md 
+            hover:bg-green-100 transition-colors duration-300 inline-block mt-3 text-lg mx-auto
+            active:text-neutral-400"
             >
               Start Shopping
             </div>
@@ -82,9 +83,6 @@ export default function CartPage() {
                     <div className="mr-auto flex">
                       <p className="">{cartProd.name}</p>
                     </div>
-                    <div className="mr-auto flex">
-                      <p>{cartProd.gr}gr</p>
-                    </div>
                     <div className="ml-auto">
                       <p className="">{cartProd.qty * cartProd.price}€</p>
                     </div>
@@ -97,7 +95,11 @@ export default function CartPage() {
                     </div>
                   </div>
                   <div>
-                    <hr className="border-1 border-stone-400" />
+                    {index !== cart.length - 1 && (
+                      <div>
+                        <hr className="border-1 border-stone-400" />
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
@@ -121,12 +123,12 @@ export default function CartPage() {
                 <p className="mt-6">{total}€</p>
               </div>
             </div>
-            <Link href="/" className="ml-auto mr-auto">
+            <Link href="/checkout" className="ml-auto mr-auto">
               <div
                 className="border-[1px] border-neutral-700 rounded-xl items-center bg-neutral-50 px-10 
-                py-2 shadow-md hover:bg-green-100 transition-colors duration-300"
+                py-2 shadow-md hover:bg-green-100 transition-colors duration-300 text-xl active:text-neutral-400"
               >
-                <p className="text-xl">Checkout</p>
+                Checkout
               </div>
             </Link>
           </div>
@@ -140,7 +142,10 @@ export default function CartPage() {
             className="w-5 h-5 mb-1 inline-block"
           />
         </Link>
-        <Link href="/shop" className="inline-block">
+        <Link
+          href="/shop"
+          className="inline-block active:text-neutral-400 transition-colors duration-300"
+        >
           <p className="inline-block text-lg">Continue Shopping</p>
         </Link>
       </div>

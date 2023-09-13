@@ -46,8 +46,9 @@ export default function ProductDetail({ product }: { product: Product }) {
           <p>{product.text}</p>
           <br />
           <div
-            className="border-[1px] border-neutral-400 rounded-3xl bg-neutral-50 px-4 py-1 shadow-md
-             hover:bg-green-100 transition-colors duration-300  inline-block cursor-pointer"
+            className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 px-4 py-1 shadow-md
+             hover:bg-green-100 transition-colors duration-300  inline-block cursor-pointer
+             active:text-neutral-400"
             onClick={() => addToCart(product)}
           >
             <p className="text-base">Add to Cart</p>
@@ -62,7 +63,10 @@ export default function ProductDetail({ product }: { product: Product }) {
             className="w-5 h-5 mb-1 inline-block"
           />
         </Link>
-        <Link href="/shop" className="inline-block">
+        <Link
+          href="/shop"
+          className="inline-block active:text-neutral-400 transition-colors duration-300"
+        >
           <p className="inline-block text-lg">Back to Products</p>
         </Link>
       </div>
