@@ -49,7 +49,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     }
   };
 
-  // REMOVING THE WHOLE ITEM
+  // REMOVING THE WHOLE ITEM FROM CART
   const deleteFromCart = (productToAdd: Product) => {
     const updatedCart = cart.map((item) => {
       if (item.id === productToAdd.id) {
