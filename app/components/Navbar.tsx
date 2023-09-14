@@ -19,12 +19,9 @@ export default function Navbar() {
         <Link href="/">
           <Image src={logo} alt="logo" className="h-10 w-40 mb-auto mt-auto" />
         </Link>
-        <div className="flex justify-end ml-auto space-x-10 text-lg mb-auto mt-auto pr-3">
+        <div className="flex justify-end ml-auto space-x-10 text-xl mb-auto mt-auto pr-3">
           <Link href="/" className="hover:text-stone-600">
             Home
-          </Link>
-          <Link href="/company" className="hover:text-stone-600">
-            Company
           </Link>
           <Link href="/policy" className="hover:text-stone-600 flex flex-row">
             3F

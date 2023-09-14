@@ -96,43 +96,40 @@ export default function CartPage() {
                     </div>
                   </div>
                   <div>
-                    {index !== cart.length - 1 && (
-                      <div>
-                        <hr className="border-1 border-stone-400" />
-                      </div>
-                    )}
+                    <hr className="border-1 border-stone-400" />
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
 
-          <div className="flex flex-col mx-auto items-center gap-8">
-            <div className="flex flex-row gap-96">
-              <div className="flex flex-col text-left gap-3">
-                <p className="">Subtotal:</p>
-                <p className="">Shipping:</p>
-                <p className="text-2xl mt-6">Total:</p>
-              </div>
-              <div className="flex flex-col text-right gap-3">
-                <p>{subtotal}€</p>
-                {shippingFee === 0 ? (
-                  <p className="text-green-700">{shippingFee}€</p>
-                ) : (
-                  <p>{shippingFee}€</p>
-                )}
-                <p className="mt-6">{total}€</p>
+              <div className="flex flex-col mx-auto items-center gap-8">
+                <div className="flex flex-row gap-96 mt-10">
+                  <div className="flex flex-col text-left gap-3">
+                    <p className="">Subtotal:</p>
+                    <p className="">Shipping:</p>
+                    <p className="text-2xl mt-6">Total:</p>
+                  </div>
+                  <div className="flex flex-col text-right gap-3">
+                    <p>{subtotal}€</p>
+                    {shippingFee === 0 ? (
+                      <p className="text-green-700">{shippingFee}€</p>
+                    ) : (
+                      <p>{shippingFee}€</p>
+                    )}
+                    <p className="mt-6">{total}€</p>
+                  </div>
+                </div>
+
+                <Link href="/checkout" className="ml-auto mr-auto">
+                  <div
+                    id="main-button"
+                    className="border-[1px] border-neutral-700 rounded-xl items-center bg-neutral-50 px-10 
+                py-2 shadow-md hover:bg-green-100 transition-colors duration-300 text-xl active:text-neutral-400 mb-6"
+                  >
+                    Checkout
+                  </div>
+                </Link>
               </div>
             </div>
-            <Link href="/checkout" className="ml-auto mr-auto">
-              <div
-                id="main-button"
-                className="border-[1px] border-neutral-700 rounded-xl items-center bg-neutral-50 px-10 
-                py-2 shadow-md hover:bg-green-100 transition-colors duration-300 text-xl active:text-neutral-400"
-              >
-                Checkout
-              </div>
-            </Link>
           </div>
         </div>
       )}

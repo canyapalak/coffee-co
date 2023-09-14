@@ -23,7 +23,7 @@ export default function Home() {
                 hover:scale-105 transition-[transform, shadow]"
               />
             </div>
-            <Link href="/company" className="ml-auto mr-auto">
+            <Link href="/policy" className="ml-auto mr-auto">
               <div
                 id="main-button"
                 className="border-[1px] border-neutral-400 rounded-xl items-center bg-neutral-50 px-5 
