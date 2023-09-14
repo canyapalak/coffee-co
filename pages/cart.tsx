@@ -32,6 +32,7 @@ export default function CartPage() {
           <p className="text-xl">Your Shopping Cart is empty.</p>
           <Link href="/shop">
             <div
+              id="main-button"
               className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 px-5 py-2 shadow-md 
             hover:bg-green-100 transition-colors duration-300 inline-block mt-3 text-lg mx-auto
             active:text-neutral-400"
@@ -125,6 +126,7 @@ export default function CartPage() {
             </div>
             <Link href="/checkout" className="ml-auto mr-auto">
               <div
+                id="main-button"
                 className="border-[1px] border-neutral-700 rounded-xl items-center bg-neutral-50 px-10 
                 py-2 shadow-md hover:bg-green-100 transition-colors duration-300 text-xl active:text-neutral-400"
               >

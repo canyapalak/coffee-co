@@ -46,6 +46,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           <p>{product.text}</p>
           <br />
           <div
+            id="main-button"
             className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 px-4 py-1 shadow-md
              hover:bg-green-100 transition-colors duration-300  inline-block cursor-pointer
              active:text-neutral-400"

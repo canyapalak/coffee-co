@@ -25,6 +25,7 @@ export default function Home() {
             </div>
             <Link href="/company" className="ml-auto mr-auto">
               <div
+                id="main-button"
                 className="border-[1px] border-neutral-400 rounded-xl items-center bg-neutral-50 px-5 
               py-2 shadow-md hover:bg-green-100 transition-colors duration-300 active:text-neutral-400"
               >
@@ -90,6 +91,7 @@ export default function Home() {
               </div>
               <Link href="/shop" className="ml-auto mr-auto">
                 <div
+                  id="main-button"
                   className="border-[1px] border-neutral-400 rounded-xl items-center bg-neutral-50 px-5 
                 py-2 shadow-md hover:bg-green-100 transition-colors duration-300 active:text-neutral-400"
                 >
@@ -108,6 +110,7 @@ export default function Home() {
           </p>
           <Link href="/policy" className="ml-auto mr-auto">
             <div
+              id="main-button"
               className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 px-5 
                 py-2 shadow-md hover:bg-green-100 transition-colors duration-300 inline-block mt-3 active:text-neutral-400"
             >
@@ -124,6 +127,7 @@ export default function Home() {
           </p>
           <Link href="/shop" className="ml-auto mr-auto">
             <div
+              id="main-button"
               className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 px-5 
                 py-2 shadow-md hover:bg-green-100 transition-colors duration-300  inline-block mt-3 active:text-neutral-400"
             >

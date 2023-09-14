@@ -3,8 +3,7 @@ import logo from "@/public/assets/images/logo001.png";
 import "tailwindcss/tailwind.css";
 import Link from "next/link";
 import leaf from "@/public/assets/images/leaf2.png";
-import cartEmpty from "@/public/assets/images/cart01.png";
-import cartFull from "@/public/assets/images/cart02.png";
+import cartIcon from "@/public/assets/images/cart.png";
 
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
@@ -36,11 +35,20 @@ export default function Navbar() {
           </Link>
           {isCartEmpty ? (
             <Link href="/cart">
-              <Image src={cartEmpty} alt="Cart" className="w-6 h-6" />
+              <Image src={cartIcon} alt="Cart" className="w-6 h-6" />
             </Link>
           ) : (
-            <Link href="/cart">
-              <Image src={cartFull} alt="Cart" className="w-6 h-6" />
+            <Link href="/cart" className="relative">
+              <div className="relative inline-block">
+                <Image src={cartIcon} alt="Cart" className="w-6 h-6" />
+                <div
+                  id="cart-circle"
+                  className="absolute top-3 right-2 text-black w-4 h-4 
+                rounded-full flex items-center justify-center text-xs"
+                >
+                  {cart.length}
+                </div>
+              </div>
             </Link>
           )}
         </div>

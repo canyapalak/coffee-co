@@ -22,3 +22,11 @@ background: rgb(236, 236, 236);
 .slide-in {
   animation: slideInFromTop 1s ease;
 }
+
+#main-button:hover {
+background-color:antiquewhite;
+}
+
+#cart-circle {
+  background-color: #9CD175;
+}
