@@ -30,3 +30,7 @@ background-color:antiquewhite;
 #cart-circle {
   background-color: #9CD175;
 }
+
+#footer-icon:hover {
+  color: #9CD175;
+}

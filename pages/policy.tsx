@@ -15,11 +15,11 @@ export default function Policy() {
         <div className="text-center">
           <p className="text-xl font-semibold mb-4">What is 3F?</p>
           <p>
-            We are passionate about delivering not just a cup of coffee but an
-            entire experience that revolves around our three core values: Fair,
-            Friendly and Fresh. These principles are the bedrock of our
-            commitment to providing you with the finest coffee beans from around
-            the world.
+            At Coffee-Co, we are passionate about delivering not just a cup of
+            coffee but an entire experience that revolves around our three core
+            values: Fair, Friendly and Fresh. These principles are the bedrock
+            of our commitment to providing you with the finest coffee beans from
+            around the world.
           </p>
           <br />
         </div>
