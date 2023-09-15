@@ -151,8 +151,8 @@ export default function Checkout() {
           <div className="text-2xl mt-10">
             <p>
               Your order has been received, {""}
-              <span className="text-lime-600">{fullName}</span>. Thank you for
-              your purchase.
+              <span id="lime-text">{fullName}</span>. Thank you for your
+              purchase.
             </p>
           </div>
           <div className="flex items-center justify-center mt-10 gap-2">

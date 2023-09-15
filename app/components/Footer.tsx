@@ -17,7 +17,7 @@ export default function Footer() {
     >
       <div className="flex-col">
         <Image src={logo} alt="logo" className="h-6 w-24 mb-1" />
-        <p className="mx-auto">Fake shop app</p>
+        <p className="mx-auto pl-1">Fake shop app</p>
       </div>
 
       <div className="flex mx-auto text-lg pr-3 gap-8">

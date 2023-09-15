@@ -111,7 +111,7 @@ export default function CartPage() {
                   <div className="flex flex-col text-right gap-3">
                     <p>{subtotal}€</p>
                     {shippingFee === 0 ? (
-                      <p className="text-green-700">{shippingFee}€</p>
+                      <p id="lime-text">{shippingFee}€</p>
                     ) : (
                       <p>{shippingFee}€</p>
                     )}
@@ -131,23 +131,23 @@ export default function CartPage() {
               </div>
             </div>
           </div>
+          <div className="flex items-center justify-center gap-2">
+            <Link href="/shop" className="inline-block">
+              <Image
+                src={leftArrow}
+                alt="Left Arrow"
+                className="w-5 h-5 mb-1 inline-block"
+              />
+            </Link>
+            <Link
+              href="/shop"
+              className="inline-block active:text-neutral-400 transition-colors duration-300"
+            >
+              <p className="inline-block text-lg">Continue Shopping</p>
+            </Link>
+          </div>
         </div>
       )}
-      <div className="flex items-center justify-center mt-10 gap-2">
-        <Link href="/shop" className="inline-block">
-          <Image
-            src={leftArrow}
-            alt="Left Arrow"
-            className="w-5 h-5 mb-1 inline-block"
-          />
-        </Link>
-        <Link
-          href="/shop"
-          className="inline-block active:text-neutral-400 transition-colors duration-300"
-        >
-          <p className="inline-block text-lg">Continue Shopping</p>
-        </Link>
-      </div>
     </div>
   );
 }

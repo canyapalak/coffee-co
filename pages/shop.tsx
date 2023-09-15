@@ -40,7 +40,9 @@ export default function Shop({}) {
             <p>{showIntensity(prod.int)}</p>
             <p>{prod.gr} gr</p>
             <p>{prod.price}€</p>
-            <p className="text-xs text-green-600 ">IN STOCK</p>
+            <p className="text-xs" id="lime-text">
+              IN STOCK
+            </p>
           </div>
         </Link>
       ))}

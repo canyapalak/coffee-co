@@ -63,13 +63,13 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    name: "'Coffee-Co Special' - Blend",
+    name: "'Coffee-Co Legacy' - Blend",
     gr: 300,
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545734/pack08-removebg-preview_qqdka3.png",
     price: 35,
     int: 3,
     qty: 0,
-    text: "Our Coffee-Co Special blend is a carefully crafted masterpiece that brings together beans from various regions. This complex blend offers a well-rounded flavor profile with hints of chocolate, caramel, and a touch of citrus. It's a crowd-pleaser that caters to a wide range of coffee preferences.",
+    text: "Our Coffee-Co Legacy blend is a carefully crafted masterpiece that brings together beans from various regions. This complex blend offers a well-rounded flavor profile with hints of chocolate, caramel, and a touch of citrus. It's a crowd-pleaser that caters to a wide range of coffee preferences.",
   },
   {
     id: 8,
