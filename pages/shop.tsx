@@ -18,7 +18,7 @@ export default function Shop({}) {
     ));
   }
   return (
-    <div className="flex flex-wrap gap-8 px-24 py-5 mb-20 text-lg">
+    <div className="flex flex-wrap gap-8 text-lg">
       {products.map((prod) => (
         <Link
           href={`/shop/${prod.id}`}

@@ -26,7 +26,7 @@ export default function CartPage() {
   const total = subtotal + shippingFee;
 
   return (
-    <div className="px-24 py-5 mb-20 text-lg">
+    <div className="text-lg">
       {isCartEmpty ? (
         <div className="flex flex-col gap-6 items-center mx-auto mt-10">
           <p className="text-xl">Your Shopping Cart is empty.</p>

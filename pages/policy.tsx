@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Policy() {
   return (
-    <div className="px-24 py-5 mb-20">
+    <div>
       <div
         className="flex flex-col bg-gradient-to-br from-stone-50 to-stone-100 rounded-xl shadow-xl px-14 py-10
            border-stone-300 border-[1px] text-justify gap-6 text-lg"
@@ -23,7 +23,7 @@ export default function Policy() {
           </p>
           <br />
         </div>
-        <div className="flex flex-row gap-10">
+        <div className="flex-col md:flex-row gap-10">
           <div className="w-2/6">
             <Image src={fair} alt="Fair" className="mx-auto w-16 h-16 mb-4" />
             <p>

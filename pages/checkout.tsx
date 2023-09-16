@@ -71,7 +71,7 @@ export default function Checkout() {
   }, [fullName, eMail, address, phoneNumber]);
 
   return (
-    <div className="px-24 py-5 mb-20 text-lg">
+    <div className="text-lg">
       {showCheckout ? (
         <div className="flex flex-col gap-6 items-center mx-auto mt-10">
           <div className="text-xl">
