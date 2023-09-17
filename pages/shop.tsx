@@ -18,13 +18,13 @@ export default function Shop({}) {
     ));
   }
   return (
-    <div className="flex flex-wrap gap-8 text-lg">
+    <div className="flex flex-col md:flex-row flex-wrap gap-8 text-lg">
       {products.map((prod) => (
         <Link
           href={`/shop/${prod.id}`}
           key={prod.id}
           className="group flex flex-col flex-wrap bg-gradient-to-br from-stone-50 to-stone-100 ml-auto mr-auto text-center 
-            rounded-xl shadow-xl items-center p-5 w-1/5 border-stone-300 border-[1px] hover:scale-105 transition-transform duration-300"
+            rounded-xl shadow-xl items-center p-5 w-64 border-stone-300 border-[1px] hover:scale-105 transition-transform duration-300"
         >
           <div className="relative overflow-hidden ml-auto mr-auto p-3 rounded-xl">
             <Image

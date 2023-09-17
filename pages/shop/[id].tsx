@@ -72,8 +72,12 @@ export default function ProductDetail({ product }: { product: Product }) {
 
   return (
     <div>
-      <div className="flex flex-row mr-auto ml-auto w-3/5 bg-gradient-to-br from-stone-50 to-stone-100 rounded-xl shadow-xl p-8 border-stone-300 border-[1px] ">
-        <div className="w-2/6 m-auto relative overflow-hidden">
+      <div
+        className="flex flex-col md:flex-row mr-auto ml-auto xl:w-3/5 
+      bg-gradient-to-br from-stone-50 to-stone-100 rounded-xl shadow-xl 
+      px-4 py-8 md:p-8 border-stone-300 border-[1px] gap-6 md:gap-0"
+      >
+        <div className="md:w-2/6 m-auto relative overflow-hidden">
           <Image
             src={product.img}
             alt={product.name}
@@ -83,7 +87,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                 hover:scale-105 transition-[transform]"
           />
         </div>
-        <div className="pl-4 w-4/6 text-lg">
+        <div className="pl-4 md:w-4/6 text-lg md:mt-8 mt:0 md:text-left text-center">
           <h1 className="text-2xl font-semibold">{product.name}</h1>
           <div className="mt-2">
             {Array.from({ length: product.int }, (_, index) => (
