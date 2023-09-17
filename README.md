@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coffee-Co
 
-## Getting Started
+<h2>A fictional coffee brand's online shop built with Next.js, TypeScript, and Tailwind CSS</h2>
 
-First, run the development server:
+<h2>Functionality and purpose of the application</h2>
+<p>
+Coffee-Co provides a range of features to enhance the user's shopping experience:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **Landing Page:** Welcoming users with a sleek and informative landing page to introduce the brand and products.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Policy Page:** An elegantly designed policy page that informs users about company policies.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Shop Page:** A shop page showcasing all coffee products, each displayed with some info and enticing AI-generated imagery.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Product Detail Page:** Individual product pages with detailed information, including pricing, intensity and description.
 
-## Learn More
+- **Cart:** Users can add or remove products to/from their cart, increase or decrease the quantity, and view the updated total amount.
 
-To learn more about Next.js, take a look at the following resources:
+- **Checkout Page:** A simple checkout process with input validation for shipping and payment information.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Shipping Fee:** A pricing model that offers free shipping on orders exceeding 100 euros.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Responsive Design:** Coffee-Co is fully responsive, ensuring a seamless experience on all devices, from desktops to mobile phones.
+</p>
 
-## Deploy on Vercel
+<h2>Technologies Used</h2>
+<p>
+Coffee-Co was built using the following technologies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Next.js](https://nextjs.org/): A React framework for building server-rendered web applications.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [TypeScript](https://www.typescriptlang.org/): A statically typed superset of JavaScript for improved code quality and maintainability.
+
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for creating custom, responsive designs efficiently.
+
+</p>
+  
+<h2>Technologies used</h2>
+<p>
+Next.js
+<br>
+Typescript
+<br>
+React
+<br>
+Tailwind CSS
+<br>
+
+<h2>Deployed on Vercel:</h2>
+ https://coffee-co-shop.vercel.app/
+
+ 
