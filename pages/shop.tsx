@@ -3,6 +3,7 @@ import { products } from "@/public/assets/Products";
 import intenseIcon from "@/public/assets/images/intense-icon.png";
 import Image from "next/image";
 import Link from "next/link";
+import Spinner from "@/app/components/Spinner";
 
 export default function Shop({}) {
   function showIntensity(intensity: number) {
@@ -19,6 +20,7 @@ export default function Shop({}) {
   }
   return (
     <div className="flex flex-col md:flex-row flex-wrap gap-8 text-lg">
+      <Spinner />
       {products.map((prod) => (
         <Link
           href={`/shop/${prod.id}`}

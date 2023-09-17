@@ -7,7 +7,37 @@ background: rgb(236, 236, 236);
   background: linear-gradient(336deg, rgba(236, 236, 236, 1) 33%, rgba(241, 246, 227, 1) 71%);
 }
 
-@keyframes slideInFromTop  {
+#main-button:hover {
+background-color:antiquewhite;
+}
+
+#cart-circle {
+  background-color: #9CD175;
+}
+
+#footer-icon:hover {
+  color: #9CD175;
+}
+
+#lime-text {
+  color: #628949;
+}
+
+#spin-logo {
+  animation: rotation 1.5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes slideInFromTop {
   0% {
     opacity: 0;
     transform: translateY(-100%);
@@ -29,22 +59,6 @@ background: rgb(236, 236, 236);
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-#main-button:hover {
-background-color:antiquewhite;
-}
-
-#cart-circle {
-  background-color: #9CD175;
-}
-
-#footer-icon:hover {
-  color: #9CD175;
-}
-
-#lime-text {
-  color: #628949;
 }
 
 @media (max-width: 768px) {

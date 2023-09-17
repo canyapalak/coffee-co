@@ -2,7 +2,6 @@ import "tailwindcss/tailwind.css";
 import fair from "@/public/assets/images/fair.png";
 import friendly from "@/public/assets/images/friendly.png";
 import fresh from "@/public/assets/images/fresh.png";
-
 import Image from "next/image";
 
 export default function Policy() {

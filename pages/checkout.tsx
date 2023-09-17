@@ -5,6 +5,7 @@ import confirm from "@/public/assets/images/confirm.png";
 import leftArrow from "@/public/assets/images/left-arrow.png";
 import Image from "next/image";
 import { CartContext } from "@/app/contexts/CartContext";
+import Spinner from "@/app/components/Spinner";
 
 export default function Checkout() {
   const [showCheckout, setShowCheckout] = useState<boolean>(true);
@@ -145,6 +146,7 @@ export default function Checkout() {
         </div>
       ) : (
         <div className="flex flex-col items-center mx-auto mt-10">
+          <Spinner />
           <div>
             <Image src={confirm} alt="Confirmation" className="w-10 h-10" />
           </div>
