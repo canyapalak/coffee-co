@@ -46,14 +46,14 @@ export default function CartPage() {
           <div className="flex flex-col mx-auto items-center mt-10">
             <p className="text-xl mb-5">Your Shopping Cart</p>
             <div
-              className="bg-gradient-to-br from-stone-50 to-stone-100 rounded-xl shadow-xl px-14 py-4
+              className="bg-gradient-to-br from-stone-50 to-stone-100 rounded-xl shadow-xl px-4 lg:px-14 py-4
            border-stone-300 border-[1px]"
             >
               {cart.map((cartProd: Product, index: number) => (
                 <div>
                   <div
                     key={index}
-                    className="h-32 flex flex-row items-center gap-14"
+                    className="h-32 flex flex-row items-center gap-4 lg:gap-14"
                   >
                     <div className="flex flex-row gap-2 ">
                       <div
@@ -72,7 +72,7 @@ export default function CartPage() {
                         <p>+</p>
                       </div>
                     </div>
-                    <div>
+                    <div id="cart-image" className="w-16 h-24">
                       <Image
                         src={cartProd.img}
                         alt="Product"
@@ -89,7 +89,7 @@ export default function CartPage() {
                     </div>
                     <div
                       className="bg-red-300 rounded-xl shadow-md px-3 text-xl cursor-pointer
-                     active:text-neutral-400 transition-transform duration-200"
+                     active:text-neutral-400 transition-transform duration-200 mb-1"
                       onClick={() => deleteFromCart(cartProd)}
                     >
                       <p>x</p>
@@ -102,7 +102,7 @@ export default function CartPage() {
               ))}
 
               <div className="flex flex-col mx-auto items-center gap-8">
-                <div className="flex flex-row gap-96 mt-10">
+                <div className="flex flex-row gap-36 md:gap-96 mt-10">
                   <div className="flex flex-col text-left gap-3">
                     <p className="">Subtotal:</p>
                     <p className="">Shipping:</p>

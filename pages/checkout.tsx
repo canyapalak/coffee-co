@@ -83,7 +83,7 @@ export default function Checkout() {
               <p className="ml-1">Full Name</p>
               <input
                 placeholder="Full Name"
-                className="w-96 h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md "
+                className="w-72 md:w-96 h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md "
                 onChange={handleFullNameChange}
               ></input>
               {fullNameError && (
@@ -96,7 +96,7 @@ export default function Checkout() {
               <p className="ml-1">E-Mail</p>
               <input
                 placeholder="E-Mail"
-                className="w-96 h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
+                className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
                 onChange={handleEMailChange}
               ></input>
               {eMailError && (
@@ -109,7 +109,7 @@ export default function Checkout() {
               <p className="ml-1">Shipping Address</p>
               <input
                 placeholder="Shipping Address"
-                className="w-96 h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
+                className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
                 onChange={handleAddressChange}
               ></input>
               {addressError && (
@@ -122,7 +122,7 @@ export default function Checkout() {
               <p className="ml-1">Phone Number</p>
               <input
                 placeholder="Phone Number"
-                className="w-96 h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
+                className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
                 onChange={handlePhoneNumberChange}
               ></input>
               {phoneNumberError && (
@@ -148,7 +148,7 @@ export default function Checkout() {
           <div>
             <Image src={confirm} alt="Confirmation" className="w-10 h-10" />
           </div>
-          <div className="text-2xl mt-10">
+          <div className="text-2xl mt-10 text-center ">
             <p>
               Your order has been received, {""}
               <span id="lime-text">{fullName}</span>. Thank you for your
