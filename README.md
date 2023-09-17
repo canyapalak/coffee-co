@@ -22,18 +22,6 @@ Coffee-Co provides a range of features to enhance the user's shopping experience
 
 - **Responsive Design:** Coffee-Co is fully responsive, ensuring a seamless experience on all devices, from desktops to mobile phones.
 </p>
-
-<h2>Technologies Used</h2>
-<p>
-Coffee-Co was built using the following technologies:
-
-- [Next.js](https://nextjs.org/): A React framework for building server-rendered web applications.
-
-- [TypeScript](https://www.typescriptlang.org/): A statically typed superset of JavaScript for improved code quality and maintainability.
-
-- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for creating custom, responsive designs efficiently.
-
-</p>
   
 <h2>Technologies used</h2>
 <p>
