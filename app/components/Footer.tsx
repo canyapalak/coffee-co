@@ -20,7 +20,7 @@ export default function Footer() {
         <p className="mx-auto pl-1">Fake shop app</p>
       </div>
 
-      <div className="flex mx-auto text-lg pr-3 gap-8">
+      <div className="flex flex-col md:flex-row mx-auto text-lg pr-3 gap-8">
         <div>
           <a
             target="_blank"

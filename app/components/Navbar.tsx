@@ -5,7 +5,7 @@ import Link from "next/link";
 import leaf from "@/public/assets/images/leaf2.png";
 import cartIcon from "@/public/assets/images/cart.png";
 
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import { CartContext } from "../contexts/CartContext";
 
 export default function Navbar() {
@@ -19,10 +19,36 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        isMenuOpen
+      ) {
+        closeMenu();
+      }
+    };
+
+    const closeMenu = () => {
+      setIsMenuOpen(false);
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("beforeunload", closeMenu);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("beforeunload", closeMenu);
+    };
+  }, [isMenuOpen]);
+
   return (
     <>
-      <div className="mb-10 text-xl">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="mb-24 text-xl">
+        <div className="max-w-screen flex flex-wrap items-center justify-between mx-auto py-2">
           <Link href="/">
             <Image
               src={logo}
@@ -34,7 +60,7 @@ export default function Navbar() {
             onClick={toggleMenu}
             type="button"
             className="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-neutral-600 
-            rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-neutral-400 "
+            rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-neutral-400 mt-1"
             aria-controls="navbar-default"
             aria-expanded={isMenuOpen ? "true" : "false"}
           >
@@ -54,6 +80,7 @@ export default function Navbar() {
             </svg>
           </button>
           <div
+            ref={menuRef}
             className={`my-auto w-full md:block md:w-auto ${
               isMenuOpen ? "block" : "hidden"
             }`}

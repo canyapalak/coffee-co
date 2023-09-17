@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-main {
+body {
 background: rgb(236, 236, 236);
   background: linear-gradient(336deg, rgba(236, 236, 236, 1) 33%, rgba(241, 246, 227, 1) 71%);
 }
@@ -37,4 +37,10 @@ background-color:antiquewhite;
 
 #lime-text {
   color: #628949;
+}
+
+@media (max-width: 768px) {
+  #bean-boxes {
+    display:none;
+  }
 }

@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col gap-16">
-        <div className="flex flex-row gap-10">
-          <div className="flex flex-col gap-5 w-5/12">
+        <div className="flex flex-col md:flex-row gap-10">
+          <div className="flex flex-col gap-5 md:w-5/12">
             <div className="relative overflow-hidden rounded-xl">
               <Image
                 src={imgCompany}
@@ -34,10 +34,10 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex flex-col gap-5 w-7/12 justify-between">
-            <div className="relative px-2">
+          <div className="flex flex-col gap-5 md:w-7/12 justify-between md:mt-0 mt-10">
+            <div className="relative md:px-2">
               <p
-                className={`text-2xl 2xl:text-3xl slide-in active text-justify font-light`}
+                className={`text-2xl 2xl:text-3xl slide-in active text-center md:text-justify font-light`}
               >
                 The best quality coffees from across the globe, professional
                 roasting and a remarkable tasting experience. Step into the
@@ -45,7 +45,10 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col gap-5 ">
-              <div className="flex flex-row gap-5 justify-around  ml-auto mr-auto align-bottom w-11/12">
+              <div
+                className="flex flex-row gap-5 justify-around  ml-auto mr-auto align-bottom w-11/12"
+                id="bean-boxes"
+              >
                 <Link href="/shop/3" className="w-1/3">
                   <div className="relative overflow-hidden rounded-xl">
                     <div className="group">
@@ -101,7 +104,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-10 text-center ml-auto mr-auto w-2/3 mb-5">
+        <div className="mt-10 text-center ml-auto mr-auto md:w-2/3 mb-5">
           <Image src={leaf} alt="Leaf" className="w-8 h-8 inline-block" />
           <p className="text-xl inline-block">
             Read our 3F Policy and see how passionate we are about delivering
@@ -118,7 +121,7 @@ export default function Home() {
             </div>
           </Link>
         </div>
-        <div className="text-center ml-auto mr-auto w-2/3 mb-24">
+        <div className="text-center ml-auto mr-auto md:w-2/3 ">
           <Image src={truck} alt="Leaf" className="w-8 h-8 inline-block" />
           <p className="text-xl inline-block">
             We deliver to any European destination and the best part is,
