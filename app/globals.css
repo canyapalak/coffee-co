@@ -7,7 +7,7 @@ background: rgb(236, 236, 236);
   background: linear-gradient(336deg, rgba(236, 236, 236, 1) 33%, rgba(241, 246, 227, 1) 71%);
 }
 
-@keyframes slideInFromTop {
+@keyframes slideInFromTop  {
   0% {
     opacity: 0;
     transform: translateY(-100%);
@@ -19,8 +19,16 @@ background: rgb(236, 236, 236);
   }
 }
 
-.slide-in {
-  animation: slideInFromTop 1s ease;
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 #main-button:hover {
@@ -42,5 +50,25 @@ background-color:antiquewhite;
 @media (max-width: 768px) {
   #bean-boxes {
     display:none;
+  }
+    .slide-in-left {
+      animation: slideInFromLeft 1s ease;
+    }
+    .slide-in-top {
+      animation: slideInFromTop 1s ease;
+      display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+
+  .slide-in-left {
+    animation: slideInFromLeft 1s ease;
+    display: none;
+  }
+
+  .slide-in-top {
+    animation: slideInFromTop 1s ease;
   }
 }

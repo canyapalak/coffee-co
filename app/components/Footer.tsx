@@ -12,39 +12,27 @@ import {
 export default function Footer() {
   return (
     <div
-      className="px-24 flex flex-row align-middle items-center mb-0 mt-auto top-auto w-screen
+      className="px-12 md:px-24 flex flex-col gap-8 md:gap-0 md:flex-row align-middle items-center mb-0 mt-auto top-auto w-screen
        bg-stone-700 py-10 sticky text-stone-50"
     >
       <div className="flex-col">
         <Image src={logo} alt="logo" className="h-6 w-24 mb-1" />
-        <p className="mx-auto pl-1">Fake shop app</p>
+        <p className="mx-auto md:pl-1">Fake shop app</p>
       </div>
 
-      <div className="flex flex-col md:flex-row mx-auto text-lg pr-3 gap-8">
+      <div className="flex mx-auto text-lg pr-3 gap-8">
         <div>
-          <a
-            target="_blank"
-            href="https://canyapalak.vercel.app/"
-            className=" hover:text-cyan-800"
-          >
+          <a target="_blank" href="https://canyapalak.vercel.app/">
             <TbWorld className="cursor-pointer w-7 h-7" id="footer-icon" />
           </a>
         </div>
         <div>
-          <a
-            target="_blank"
-            href="mailto:canyapalak@gmail.com"
-            className=" hover:text-cyan-800"
-          >
+          <a target="_blank" href="mailto:canyapalak@gmail.com">
             <TbMail className="cursor-pointer w-7 h-7" id="footer-icon" />
           </a>
         </div>
         <div>
-          <a
-            target="_blank"
-            href="https://github.com/canyapalak"
-            className=" hover:text-cyan-800"
-          >
+          <a target="_blank" href="https://github.com/canyapalak">
             <TbBrandGithubFilled
               className="cursor-pointer w-7 h-7"
               id="footer-icon"
@@ -55,7 +43,6 @@ export default function Footer() {
           <a
             target="_blank"
             href="https://www.linkedin.com/in/can-yapalak-a1359b76/"
-            className=" hover:text-cyan-800"
           >
             <TbBrandLinkedin
               className="cursor-pointer w-7 h-7"

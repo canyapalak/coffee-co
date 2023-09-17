@@ -35,9 +35,18 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-5 md:w-7/12 justify-between md:mt-0 mt-10">
-            <div className="relative md:px-2">
+            <div className="relative md:px-2 slide-in-top">
               <p
-                className={`text-2xl 2xl:text-3xl slide-in active text-center md:text-justify font-light`}
+                className={`text-2xl 2xl:text-3xl active text-center md:text-justify font-light`}
+              >
+                The best quality coffees from across the globe, professional
+                roasting and a remarkable tasting experience. Step into the
+                world of Coffee-Co and join us on this flavorful journey.
+              </p>
+            </div>
+            <div className="relative md:px-2 slide-in-left">
+              <p
+                className={`text-2xl 2xl:text-3xl active text-center md:text-justify font-light`}
               >
                 The best quality coffees from across the globe, professional
                 roasting and a remarkable tasting experience. Step into the

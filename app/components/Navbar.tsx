@@ -59,13 +59,14 @@ export default function Navbar() {
           <button
             onClick={toggleMenu}
             type="button"
-            className="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-neutral-600 
-            rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-neutral-400 mt-1"
+            className="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-lime-900 
+            rounded-xl md:hidden focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:bg-neutral-50 
+            focus:bg-opacity-40 mt-3"
             aria-controls="navbar-default"
             aria-expanded={isMenuOpen ? "true" : "false"}
           >
             <svg
-              className={`mt-2 w-5 h-5 ${isMenuOpen ? "text-neutral-700" : ""}`}
+              className={` w-5 h-5 ${isMenuOpen ? " text-lime-900" : ""}`}
               aria-hidden="true"
               fill="none"
               viewBox="0 0 17 14"
@@ -86,7 +87,7 @@ export default function Navbar() {
             }`}
             id="navbar-default"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-3 md:flex-row md:space-x-8">
+            <ul className="flex flex-col p-4 md:p-0 mt-3 md:flex-row md:space-x-8 items-center">
               <div>
                 <Link
                   href="/"
@@ -95,16 +96,18 @@ export default function Navbar() {
                   Home
                 </Link>
               </div>
-              <div className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600">
+              <div className="md:border-0 md:p-0 hover:text-stone-600">
+                <hr className="border-1 border-lime-900 md:border-0" />
                 <Link
                   href="/policy"
-                  className="hover:text-stone-600 flex flex-row "
+                  className=" py-2 pl-3 pr-4 hover:text-stone-600 flex flex-row "
                 >
                   3F
                   <Image src={leaf} alt="Leaf" className="w-6 h-6" />
                 </Link>
               </div>
               <div>
+                <hr className="border-1 border-lime-900 md:border-0" />
                 <Link
                   href="/shop"
                   className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600"
@@ -113,6 +116,7 @@ export default function Navbar() {
                 </Link>
               </div>
               <div>
+                <hr className="border-1 border-lime-900 md:border-0" />
                 {isCartEmpty ? (
                   <Link
                     href="/cart"
