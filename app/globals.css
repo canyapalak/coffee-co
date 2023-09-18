@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-background: rgb(236, 236, 236);
+#app-bg {
+  background: rgb(236, 236, 236);
   background: linear-gradient(336deg, rgba(236, 236, 236, 1) 33%, rgba(241, 246, 227, 1) 71%);
+  transition: background-color 2000ms ease !important;
+}
+
+.dark #app-bg {
+  background: rgb(110, 112, 105);
+  background: radial-gradient(circle, rgba(110, 112, 105, 1) 29%, rgba(82, 82, 82, 1) 79%);
+  transition: background-color 2000ms ease !important;
 }
 
 #main-button:hover {

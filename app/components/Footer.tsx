@@ -1,7 +1,6 @@
 import Image from "next/image";
 import logo from "@/public/assets/images/logo002.png";
 import "tailwindcss/tailwind.css";
-import Link from "next/link";
 import {
   TbWorld,
   TbMail,
