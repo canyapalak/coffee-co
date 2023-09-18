@@ -26,7 +26,7 @@ export default function Home() {
             <Link href="/policy" className="ml-auto mr-auto">
               <div
                 id="main-button"
-                className="border-[1px] border-neutral-400 rounded-xl items-center bg-neutral-50 px-5 
+                className="border-[1px] border-neutral-400 rounded-xl items-center bg-neutral-50 dark:bg-stone-300 px-5 
               py-2 shadow-md hover:bg-green-100 transition-colors duration-300 active:text-neutral-400"
               >
                 <p className="text-lg">Learn About the Company</p>
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-5 md:w-7/12 justify-between md:mt-0 mt-10">
-            <div className="relative md:px-2 slide-in-top">
+            <div className="relative md:px-2 slide-in-top dark:text-orange-50">
               <p
                 className={`text-2xl 2xl:text-3xl active text-center md:text-justify font-light`}
               >
@@ -44,7 +44,7 @@ export default function Home() {
                 world of Coffee-Co and join us on this flavorful journey.
               </p>
             </div>
-            <div className="relative md:px-2 slide-in-left">
+            <div className="relative md:px-2 slide-in-left dark:text-orange-50">
               <p
                 className={`text-2xl 2xl:text-3xl active text-center md:text-justify font-light`}
               >
@@ -104,7 +104,7 @@ export default function Home() {
               <Link href="/shop" className="ml-auto mr-auto">
                 <div
                   id="main-button"
-                  className="border-[1px] border-neutral-400 rounded-xl items-center bg-neutral-50 px-5 
+                  className="border-[1px] border-neutral-400 rounded-xl items-center bg-neutral-50 dark:bg-stone-300 px-5 
                 py-2 shadow-md hover:bg-green-100 transition-colors duration-300 active:text-neutral-400"
                 >
                   <p className="text-lg">Discover Our Coffee Beans</p>
@@ -113,9 +113,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-10 text-center ml-auto mr-auto md:w-2/3 mb-5">
+        <div className="mt-10 text-center ml-auto mr-auto md:w-2/3 mb-5 ">
           <Image src={leaf} alt="Leaf" className="w-8 h-8 inline-block" />
-          <p className="text-xl inline-block">
+          <p className="text-xl inline-block dark:text-orange-50">
             Read our 3F Policy and see how passionate we are about delivering
             not just a cup of coffee but an entire experience that revolves
             around our three core values.
@@ -123,8 +123,9 @@ export default function Home() {
           <Link href="/policy" className="ml-auto mr-auto">
             <div
               id="main-button"
-              className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 px-5 
-                py-2 shadow-md hover:bg-green-100 transition-colors duration-300 inline-block mt-3 active:text-neutral-400"
+              className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 dark:bg-stone-300 px-5 
+                py-2 shadow-md hover:bg-green-100 transition-colors duration-300 inline-block mt-3 
+                active:text-neutral-400"
             >
               <p className="text-lg">Our Policy</p>
             </div>
@@ -132,7 +133,7 @@ export default function Home() {
         </div>
         <div className="text-center ml-auto mr-auto md:w-2/3 ">
           <Image src={truck} alt="Leaf" className="w-8 h-8 inline-block" />
-          <p className="text-xl inline-block">
+          <p className="text-xl inline-block dark:text-orange-50">
             We deliver to any European destination and the best part is,
             shipping is free for your orders over 100€. Real coffee lovers stock
             up their coffee.
@@ -140,8 +141,9 @@ export default function Home() {
           <Link href="/shop" className="ml-auto mr-auto">
             <div
               id="main-button"
-              className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 px-5 
-                py-2 shadow-md hover:bg-green-100 transition-colors duration-300  inline-block mt-3 active:text-neutral-400"
+              className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 dark:bg-stone-300 px-5 
+                py-2 shadow-md hover:bg-green-100 transition-colors duration-300  inline-block mt-3 
+                active:text-neutral-400"
             >
               <p className="text-lg">Start Shopping</p>
             </div>

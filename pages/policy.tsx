@@ -8,7 +8,8 @@ export default function Policy() {
   return (
     <div>
       <div
-        className="flex flex-col bg-gradient-to-br from-stone-50 to-stone-100 rounded-xl shadow-xl px-8 md:px-14 py-10
+        className="flex flex-col bg-gradient-to-br from-stone-50 to-stone-100 
+        dark:from-stone-300 dark:to-stone-400 rounded-xl shadow-xl px-8 md:px-14 py-10
            border-stone-300 border-[1px] text-justify gap-6 text-lg"
       >
         <div className="text-center">

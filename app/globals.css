@@ -2,16 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-#app-bg {
-  background: rgb(236, 236, 236);
+/* #app-bg {
+  background-color: rgb(236, 236, 236);
   background: linear-gradient(336deg, rgba(236, 236, 236, 1) 33%, rgba(241, 246, 227, 1) 71%);
   transition: background-color 2000ms ease !important;
 }
 
 .dark #app-bg {
-  background: rgb(110, 112, 105);
+  background-color: rgb(110, 112, 105);
   background: radial-gradient(circle, rgba(110, 112, 105, 1) 29%, rgba(82, 82, 82, 1) 79%);
   transition: background-color 2000ms ease !important;
+} */
+
+#app-bg {
+  background: rgb(236, 236, 236);
+  background: linear-gradient(336deg, rgba(236, 236, 236, 1) 33%, rgba(241, 246, 227, 1) 71%);
+  transition-property: background-color;
+  transition-duration: 700ms;
+}
+
+.dark #app-bg {
+  background: rgb(110, 112, 105);
+  background: radial-gradient(circle, rgba(110, 112, 105, 1) 29%, rgba(82, 82, 82, 1) 79%);
+  transition-property: background-color;
+  transition-duration: 700ms;
 }
 
 #main-button:hover {
@@ -28,6 +42,10 @@ background-color:antiquewhite;
 
 #lime-text {
   color: #628949;
+}
+
+.dark #lime-text {
+  color: #b0e390;
 }
 
 #spin-logo {

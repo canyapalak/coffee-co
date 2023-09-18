@@ -84,14 +84,16 @@ export default function Navbar() {
           <button
             onClick={toggleMenu}
             type="button"
-            className="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-lime-900 
+            className="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-lime-900 dark:text-neutral-50
             rounded-xl md:hidden focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:bg-neutral-50 
             focus:bg-opacity-40 mt-3"
             aria-controls="navbar-default"
             aria-expanded={isMenuOpen ? "true" : "false"}
           >
             <svg
-              className={` w-5 h-5 ${isMenuOpen ? " text-lime-900" : ""}`}
+              className={` w-5 h-5 ${
+                isMenuOpen ? " text-lime-900 dark:text-neutral-50" : ""
+              }`}
               aria-hidden="true"
               fill="none"
               viewBox="0 0 17 14"
@@ -112,56 +114,56 @@ export default function Navbar() {
             }`}
             id="navbar-default"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-3 md:flex-row md:space-x-8 items-center">
+            <ul className="flex flex-col p-4 md:p-0 mt-3 md:flex-row md:space-x-8 items-center dark:text-orange-50">
               <div>
                 {isDark ? (
                   <HiSun
                     alt="Sun"
                     onClick={handleModeClick}
-                    className="w-6 h-6 cursor-pointer mb-2 md:mb-1"
+                    className="w-6 h-6 cursor-pointer mb-2 md:mb-1 dark:text-orange-50"
                   />
                 ) : (
                   <HiMoon
                     alt="Moon"
                     onClick={handleModeClick}
-                    className="w-6 h-6 cursor-pointer mb-2 md:mb-2"
+                    className="w-6 h-6 cursor-pointer mb-2 md:mb-1"
                   />
                 )}
               </div>
               <div>
-                <hr className="border-1 border-lime-900 md:border-0" />
+                <hr className="border-1 border-lime-900 dark:border-lime-200 md:border-0" />
                 <Link
                   href="/"
-                  className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600"
+                  className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600 dark:hover:text-neutral-300"
                 >
                   Home
                 </Link>
               </div>
-              <div className="md:border-0 md:p-0 hover:text-stone-600">
-                <hr className="border-1 border-lime-900 md:border-0" />
+              <div className="md:border-0 md:p-0 hover:text-stone-600 dark:hover:text-neutral-300">
+                <hr className="border-1 border-lime-900 dark:border-lime-200 md:border-0" />
                 <Link
                   href="/policy"
-                  className=" py-2 pl-3 pr-4 hover:text-stone-600 flex flex-row "
+                  className=" py-2 pl-3 pr-4 hover:text-stone-600 dark:hover:text-neutral-300 flex flex-row "
                 >
                   3F
                   <Image src={leaf} alt="Leaf" className="w-6 h-6" />
                 </Link>
               </div>
               <div>
-                <hr className="border-1 border-lime-900 md:border-0" />
+                <hr className="border-1 border-lime-900 dark:border-lime-200 md:border-0" />
                 <Link
                   href="/shop"
-                  className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600"
+                  className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600 dark:hover:text-neutral-300"
                 >
                   Shop
                 </Link>
               </div>
               <div>
-                <hr className="border-1 border-lime-900 md:border-0" />
+                <hr className="border-1 border-lime-900 dark:border-lime-200 md:border-0" />
                 {isCartEmpty ? (
                   <Link
                     href="/cart"
-                    className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600"
+                    className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600 dark:hover:text-neutral-300"
                   >
                     {isDark ? (
                       <Image src={cartIcon2} alt="Cart" className="w-6 h-6" />
@@ -172,7 +174,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     href="/cart"
-                    className="relative block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600"
+                    className="relative block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600 dark:hover:text-neutral-300"
                   >
                     <div className="relative inline-block">
                       {isDark ? (

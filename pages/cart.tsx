@@ -4,7 +4,7 @@ import { Product } from "@/app/types";
 import { CartContext } from "@/app/contexts/CartContext";
 import { useContext } from "react";
 import Link from "next/link";
-import leftArrow from "@/public/assets/images/left-arrow.png";
+import { BsArrowLeft } from "react-icons/bs";
 
 export default function CartPage() {
   const cartContext = useContext(CartContext);
@@ -26,16 +26,18 @@ export default function CartPage() {
   const total = subtotal + shippingFee;
 
   return (
-    <div className="text-lg">
+    <div className="text-lg min-h-screen">
       {isCartEmpty ? (
         <div className="flex flex-col gap-6 items-center mx-auto mt-10">
-          <p className="text-xl">Your Shopping Cart is empty.</p>
+          <p className="text-xl dark:text-orange-50">
+            Your Shopping Cart is empty.
+          </p>
           <Link href="/shop">
             <div
               id="main-button"
               className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 px-5 py-2 shadow-md 
             hover:bg-green-100 transition-colors duration-300 inline-block mt-3 text-lg mx-auto
-            active:text-neutral-400"
+            active:text-neutral-400 dark:bg-stone-300"
             >
               Start Shopping
             </div>
@@ -44,10 +46,12 @@ export default function CartPage() {
       ) : (
         <div className="flex flex-col gap-8 ">
           <div className="flex flex-col mx-auto items-center mt-10">
-            <p className="text-xl mb-5">Your Shopping Cart</p>
+            <p className="text-xl mb-5 dark:text-orange-50">
+              Your Shopping Cart
+            </p>
             <div
-              className="bg-gradient-to-br from-stone-50 to-stone-100 rounded-xl shadow-xl px-4 lg:px-14 py-4
-           border-stone-300 border-[1px]"
+              className="bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-300 dark:to-stone-400 
+              rounded-xl shadow-xl px-4 lg:px-14 py-4 border-stone-300 border-[1px]"
             >
               {cart.map((cartProd: Product, index: number) => (
                 <div>
@@ -122,7 +126,7 @@ export default function CartPage() {
                 <Link href="/checkout" className="ml-auto mr-auto">
                   <div
                     id="main-button"
-                    className="border-[1px] border-neutral-700 rounded-xl items-center bg-neutral-50 px-10 
+                    className="border-[1px] border-neutral-700 rounded-xl items-center bg-neutral-50 dark:bg-stone-300 px-10 
                 py-2 shadow-md hover:bg-green-100 transition-colors duration-300 text-xl active:text-neutral-400 mb-6"
                   >
                     Checkout
@@ -131,10 +135,9 @@ export default function CartPage() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center justify-center gap-2 dark:text-orange-50">
             <Link href="/shop" className="inline-block">
-              <Image
-                src={leftArrow}
+              <BsArrowLeft
                 alt="Left Arrow"
                 className="w-5 h-5 mb-1 inline-block"
               />

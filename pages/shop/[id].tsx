@@ -1,7 +1,7 @@
 import { products } from "@/public/assets/Products";
-import { CartProducts, Product } from "@/app/types/index";
+import { Product } from "@/app/types/index";
 import intenseIcon from "@/public/assets/images/intense-icon.png";
-import leftArrow from "@/public/assets/images/left-arrow.png";
+import { BsArrowLeft } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
 import { CartContext } from "@/app/contexts/CartContext";
@@ -74,8 +74,8 @@ export default function ProductDetail({ product }: { product: Product }) {
     <div>
       <div
         className="flex flex-col md:flex-row mr-auto ml-auto xl:w-3/5 
-      bg-gradient-to-br from-stone-50 to-stone-100 rounded-xl shadow-xl 
-      px-4 py-8 md:p-8 border-stone-300 border-[1px] gap-6 md:gap-0"
+      bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-300 dark:to-stone-400 
+      rounded-xl shadow-xl px-4 py-8 md:p-8 border-stone-300 border-[1px] gap-6 md:gap-0"
       >
         <div className="md:w-2/6 m-auto relative overflow-hidden">
           <Image
@@ -126,14 +126,16 @@ export default function ProductDetail({ product }: { product: Product }) {
               >
                 <p>+</p>
               </div>
-              <div className="italic text-md text-neutral-500">
+              <div className="italic text-md text-neutral-500 dark:text-neutral-100">
                 {cartStatus}
               </div>
             </div>
           ) : (
             <div
               id="main-button"
-              className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 px-4 py-1 shadow-md hover:bg-green-100 transition-colors duration-300 inline-block cursor-pointer active:text-neutral-400"
+              className="border-[1px] border-neutral-400 rounded-xl bg-neutral-50 px-4 py-1 
+              dark:bg-stone-300 shadow-md hover:bg-green-100 transition-colors duration-300 
+              inline-block cursor-pointer active:text-neutral-400"
               onClick={() => handleAddToCart(product)}
             >
               <p className="text-base">Add to Cart</p>
@@ -141,13 +143,9 @@ export default function ProductDetail({ product }: { product: Product }) {
           )}
         </div>
       </div>
-      <div className="flex items-center justify-center mt-10 gap-2">
+      <div className="flex items-center justify-center mt-10 gap-2 dark:text-orange-50">
         <Link href="/shop" className="inline-block">
-          <Image
-            src={leftArrow}
-            alt="Left Arrow"
-            className="w-5 h-5 mb-1 inline-block"
-          />
+          <BsArrowLeft alt="Left Arrow" className="w-5 h-5 mb-1 inline-block" />
         </Link>
         <Link
           href="/shop"
