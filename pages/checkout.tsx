@@ -153,7 +153,7 @@ export default function Checkout() {
           <div className="text-2xl mt-10 text-center ">
             <p>
               Your order has been received, {""}
-              <span id="lime-text">{fullName}</span>. Thank you for your
+              <span id="name-text">{fullName}</span>. Thank you for your
               purchase.
             </p>
           </div>

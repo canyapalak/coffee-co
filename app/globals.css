@@ -45,6 +45,14 @@ background-color:antiquewhite;
 }
 
 .dark #lime-text {
+  color: #3b6e1c;
+}
+
+#name-text {
+  color: #628949;
+}
+
+.dark #name-text {
   color: #b0e390;
 }
 
