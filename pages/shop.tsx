@@ -26,7 +26,7 @@ export default function Shop({}) {
           href={`/shop/${prod.id}`}
           key={prod.id}
           className="group flex flex-col flex-wrap bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-300 dark:to-stone-400 
-          mr-auto text-center rounded-xl shadow-xl items-center p-5 w-64 border-stone-300 border-[1px] hover:scale-105 transition-transform duration-300"
+          mr-auto text-center rounded-xl shadow-xl items-center p-5 w-64 border-stone-300 border-[1px] hover:scale-105 mx-auto transition-transform duration-300"
         >
           <div className="relative overflow-hidden ml-auto mr-auto p-3 rounded-xl">
             <Image
