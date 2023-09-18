@@ -1,9 +1,12 @@
 import Image from "next/image";
 import logo from "@/public/assets/images/logo001.png";
+import logo2 from "@/public/assets/images/logo002.png";
 import "tailwindcss/tailwind.css";
 import Link from "next/link";
 import leaf from "@/public/assets/images/leaf2.png";
 import cartIcon from "@/public/assets/images/cart.png";
+import cartIcon2 from "@/public/assets/images/cart2.png";
+import { HiMoon, HiSun } from "react-icons/hi";
 
 import { useContext, useState, useEffect, useRef } from "react";
 import { CartContext } from "../contexts/CartContext";
@@ -11,9 +14,20 @@ import { CartContext } from "../contexts/CartContext";
 export default function Navbar() {
   const { cart } = useContext(CartContext) || { cart: [] };
   const isCartEmpty = cart ? cart.length === 0 : true;
-  console.log("cart Navbar :>> ", cart);
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDark, setisDark] = useState(false);
+
+  function handleModeClick() {
+    setisDark(!isDark);
+  }
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDark]);
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
@@ -49,13 +63,24 @@ export default function Navbar() {
     <>
       <div className="mb-24 text-xl">
         <div className="max-w-screen flex flex-wrap items-center justify-between mx-auto py-2">
-          <Link href="/">
-            <Image
-              src={logo}
-              alt="logo"
-              className="h-10 w-40 mb-auto mt-auto"
-            />
-          </Link>
+          {isDark ? (
+            <Link href="/">
+              <Image
+                src={logo2}
+                alt="logo"
+                className="h-10 w-40 mb-auto mt-auto"
+              />
+            </Link>
+          ) : (
+            <Link href="/">
+              <Image
+                src={logo}
+                alt="logo"
+                className="h-10 w-40 mb-auto mt-auto"
+              />
+            </Link>
+          )}
+
           <button
             onClick={toggleMenu}
             type="button"
@@ -89,6 +114,22 @@ export default function Navbar() {
           >
             <ul className="flex flex-col p-4 md:p-0 mt-3 md:flex-row md:space-x-8 items-center">
               <div>
+                {isDark ? (
+                  <HiSun
+                    alt="Sun"
+                    onClick={handleModeClick}
+                    className="w-6 h-6 cursor-pointer mb-2 md:mb-1"
+                  />
+                ) : (
+                  <HiMoon
+                    alt="Moon"
+                    onClick={handleModeClick}
+                    className="w-6 h-6 cursor-pointer mb-2 md:mb-2"
+                  />
+                )}
+              </div>
+              <div>
+                <hr className="border-1 border-lime-900 md:border-0" />
                 <Link
                   href="/"
                   className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600"
@@ -122,7 +163,11 @@ export default function Navbar() {
                     href="/cart"
                     className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600"
                   >
-                    <Image src={cartIcon} alt="Cart" className="w-6 h-6" />
+                    {isDark ? (
+                      <Image src={cartIcon2} alt="Cart" className="w-6 h-6" />
+                    ) : (
+                      <Image src={cartIcon} alt="Cart" className="w-6 h-6" />
+                    )}
                   </Link>
                 ) : (
                   <Link
@@ -130,7 +175,11 @@ export default function Navbar() {
                     className="relative block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600"
                   >
                     <div className="relative inline-block">
-                      <Image src={cartIcon} alt="Cart" className="w-6 h-6" />
+                      {isDark ? (
+                        <Image src={cartIcon2} alt="Cart" className="w-6 h-6" />
+                      ) : (
+                        <Image src={cartIcon} alt="Cart" className="w-6 h-6" />
+                      )}
                       <div
                         id="cart-circle"
                         className="absolute top-3 right-2 text-black w-4 h-4 rounded-full flex items-center justify-center text-xs"

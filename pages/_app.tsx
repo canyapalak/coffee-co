@@ -17,7 +17,7 @@ export default function MyApp({ Component, pageProps }: any) {
       </Head>
       <main className={`flex flex-col min-h-screen ${spartan.className}`}>
         <CartProvider>
-          <div className="md:px-24 px-10 py-5 mb-20">
+          <div className="md:px-24 px-10 pt-5 pb-20" id="app-bg">
             <Navbar {...pageProps} />
             <Component {...pageProps} />
           </div>
