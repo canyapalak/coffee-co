@@ -12,8 +12,6 @@ interface CartProviderProps {
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [cart, setCart] = useState<Product[]>([]);
 
-  console.log("cart :>> ", cart);
-
   // ADDING ITEMS TO CART BY ONE
   const addToCart = (productToAdd: Product) => {
     const existingProductIndex = cart.findIndex(

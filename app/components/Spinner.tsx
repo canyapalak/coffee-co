@@ -8,7 +8,7 @@ export default function Spinner() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 1000); // Show the spinner for 1 second
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
