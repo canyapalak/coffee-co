@@ -1,12 +1,13 @@
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
-import { Product } from "@/app/types";
+import { Language, Product } from "@/app/types";
 import { CartContext } from "@/app/contexts/CartContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Link from "next/link";
 import { BsArrowLeft } from "react-icons/bs";
 
 export default function CartPage() {
+  const [language, setLanguage] = useState<Language>("en");
   const cartContext = useContext(CartContext);
   const { cart } = useContext(CartContext) || { cart: [] };
   const addToCart = cartContext?.addToCart || (() => {});
@@ -86,7 +87,7 @@ export default function CartPage() {
                       />
                     </div>
                     <div className="mr-auto flex">
-                      <p className="">{cartProd.name}</p>
+                      <p className="">{cartProd.name[language]}</p>
                     </div>
                     <div className="ml-auto">
                       <p className="">{cartProd.qty * cartProd.price}€</p>

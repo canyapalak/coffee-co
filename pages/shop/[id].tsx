@@ -1,14 +1,16 @@
-import { products } from "@/public/assets/Products";
-import { Product } from "@/app/types/index";
+import { products } from "@/public/assets/data/Products";
+import { Language, Product } from "@/app/types/index";
 import intenseIcon from "@/public/assets/images/intense-icon.png";
 import { BsArrowLeft } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
 import { CartContext } from "@/app/contexts/CartContext";
 import { useContext, useEffect, useState } from "react";
+import { LanguageContext } from "@/app/contexts/LanguageContext";
 
 export default function ProductDetail({ product }: { product: Product }) {
   const [isInCart, setIsInCart] = useState(false);
+  const { text, language } = useContext(LanguageContext);
   const cartContext = useContext(CartContext);
   const [quantity, setQuantity] = useState(0);
   const [cartStatus, setCartStatus] = useState("");
@@ -80,7 +82,7 @@ export default function ProductDetail({ product }: { product: Product }) {
         <div className="md:w-2/6 m-auto relative overflow-hidden">
           <Image
             src={product.img}
-            alt={product.name}
+            alt={product.name.en}
             width={200}
             height={250}
             className="mr-auto ml-auto w-44 h-72 duration-500 
@@ -88,7 +90,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           />
         </div>
         <div className="pl-4 md:w-4/6 text-lg md:mt-8 mt:0 md:text-left text-center">
-          <h1 className="text-2xl font-semibold">{product.name}</h1>
+          <h1 className="text-2xl font-semibold">{product.name[language]}</h1>
           <div className="mt-2">
             {Array.from({ length: product.int }, (_, index) => (
               <Image
@@ -105,9 +107,10 @@ export default function ProductDetail({ product }: { product: Product }) {
           <p className="text-lg mt-2">{product.price}€</p>
           <p className="mt-2 text-sm" id="lime-text">
             IN STOCK
+            {/* {text.inStock} */}
           </p>
           <br />
-          <p>{product.text}</p>
+          <p>{product.text[language]}</p>
           <br />
           {isInCart ? (
             <div className="flex flex-row gap-2 ">

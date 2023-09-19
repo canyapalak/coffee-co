@@ -1,17 +1,18 @@
+import { useContext, useState, useEffect, useRef } from "react";
+import { CartContext } from "../contexts/CartContext";
+import { LanguageContext } from "../contexts/LanguageContext";
+import "tailwindcss/tailwind.css";
+import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/assets/images/logo001.png";
 import logo2 from "@/public/assets/images/logo002.png";
-import "tailwindcss/tailwind.css";
-import Link from "next/link";
 import leaf from "@/public/assets/images/leaf2.png";
 import cartIcon from "@/public/assets/images/cart.png";
 import cartIcon2 from "@/public/assets/images/cart2.png";
 import { HiMoon, HiSun } from "react-icons/hi";
 
-import { useContext, useState, useEffect, useRef } from "react";
-import { CartContext } from "../contexts/CartContext";
-
 export default function Navbar() {
+  const { text } = useContext(LanguageContext);
   const { cart } = useContext(CartContext) || { cart: [] };
   const isCartEmpty = cart ? cart.length === 0 : true;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -126,7 +127,7 @@ export default function Navbar() {
                   <HiMoon
                     alt="Moon"
                     onClick={handleModeClick}
-                    className="w-6 h-6 cursor-pointer mb-2 md:mb-1"
+                    className="w-6 h-6 cursor-pointer mb-2 md:mb-1 text-neutral-700"
                   />
                 )}
               </div>

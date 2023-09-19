@@ -1,11 +1,16 @@
 import "tailwindcss/tailwind.css";
-import { products } from "@/public/assets/Products";
+import { products } from "@/public/assets/data/Products";
 import intenseIcon from "@/public/assets/images/intense-icon.png";
 import Image from "next/image";
 import Link from "next/link";
 import Spinner from "@/app/components/Spinner";
+import { Language } from "@/app/types";
+import { useContext, useState } from "react";
+import { LanguageContext } from "@/app/contexts/LanguageContext";
 
 export default function Shop({}) {
+  const { text } = useContext(LanguageContext);
+  const [language, setLanguage] = useState<Language>("en");
   function showIntensity(intensity: number) {
     return Array.from({ length: intensity }, (_, index) => (
       <Image
@@ -38,12 +43,12 @@ export default function Shop({}) {
             />
           </div>
           <div className="mb-3">
-            <p className="text-xl font-semibold">{prod.name}</p>
+            <p className="text-xl font-semibold">{prod.name[language]}</p>
             <p>{showIntensity(prod.int)}</p>
             <p>{prod.gr} gr</p>
             <p>{prod.price}€</p>
             <p className="text-xs" id="lime-text">
-              IN STOCK
+              {text.inStock}
             </p>
           </div>
         </Link>
