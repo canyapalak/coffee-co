@@ -28,7 +28,7 @@ export const translations = {
       "Our commitment to friendliness extends beyond our customer service. We see our customers as part of our family. We want to create a warm and welcoming environment where you feel valued and appreciated. Whether you have a question about our products, need brewing tips, or simply want to chat about your coffee preferences, our team is here for you. We believe in fostering a friendly and inclusive coffee community.",
     freshnessText:
       "For us, freshness is non-negotiable. We understand the critical role that fresh products play in the quality of your coffee. That's why we roast our beans in small batches to ensure that every bag of coffee you receive is bursting with flavor thanks to its freshness. We are committed to delivering coffee beans at their peak time so that you can enjoy the rich and aromatic notes in every sip whenever you drink your coffee.",
-    closingTexT:
+    closingText:
       "Thank you for choosing Coffee-Co, where every cup tells a story of quality, ethics, and community. Sip, savor, and enjoy!",
     //SHOP PAGE
     inStock: "IN STOCK",
@@ -113,7 +113,7 @@ export const translations = {
     phoneNumber: "Telefonnummer",
     placeOrderButton: "Bestellung aufgeben",
     fullNameRequired: "Vollname ist erforderlich",
-    eMailErforderlich: "E-Mail ist erforderlich",
+    eMailRequired: "E-Mail ist erforderlich",
     addressRequired: "Adresse ist erforderlich",
     numberRequired: "Telefonnummer ist erforderlich",
     //CONFIRMATION

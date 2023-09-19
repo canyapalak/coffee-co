@@ -6,8 +6,13 @@ import { BsArrowLeft } from "react-icons/bs";
 import Image from "next/image";
 import { CartContext } from "@/app/contexts/CartContext";
 import Spinner from "@/app/components/Spinner";
+import { LanguageContext } from "@/app/contexts/LanguageContext";
+import { translations } from "@/app/utils/translations";
+import { Language } from "@/app/types";
 
 export default function Checkout() {
+  const { text } = useContext(LanguageContext);
+  const [language, setLanguage] = useState<Language>("en");
   const [showCheckout, setShowCheckout] = useState<boolean>(true);
   const [fullName, setFullName] = useState<string>("");
   const [eMail, setEMail] = useState<string>("");
@@ -27,10 +32,16 @@ export default function Checkout() {
   };
 
   const handleClick = () => {
-    setFullNameError(fullName === "" ? "Full name is required" : "");
-    setEMailError(eMail === "" ? "Email is required" : "");
-    setAddressError(address === "" ? "Address is required" : "");
-    setPhoneNumberError(phoneNumber === "" ? "Phone number is required" : "");
+    setFullNameError(
+      fullName === "" ? translations[language].fullNameRequired : ""
+    );
+    setEMailError(eMail === "" ? translations[language].eMailRequired : "");
+    setAddressError(
+      address === "" ? translations[language].addressRequired : ""
+    );
+    setPhoneNumberError(
+      phoneNumber === "" ? translations[language].numberRequired : ""
+    );
 
     if (
       fullName === "" ||
@@ -76,14 +87,14 @@ export default function Checkout() {
       {showCheckout ? (
         <div className="flex flex-col gap-6 items-center mx-auto mt-10">
           <div className="text-xl">
-            <p>Place your order</p>
+            <p>{text.checkoutTitle}</p>
           </div>
 
           <div className="flex flex-col gap-6">
             <div className="relevant">
-              <p className="ml-1">Full Name</p>
+              <p className="ml-1">{text.fullName}</p>
               <input
-                placeholder="Full Name"
+                placeholder={text.fullName}
                 className="w-72 md:w-96 h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md "
                 onChange={handleFullNameChange}
               ></input>
@@ -94,9 +105,9 @@ export default function Checkout() {
               )}
             </div>
             <div className="relevant">
-              <p className="ml-1">E-Mail</p>
+              <p className="ml-1">{text.eMail}</p>
               <input
-                placeholder="E-Mail"
+                placeholder={text.eMail}
                 className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
                 onChange={handleEMailChange}
               ></input>
@@ -107,9 +118,9 @@ export default function Checkout() {
               )}
             </div>
             <div className="relevant">
-              <p className="ml-1">Shipping Address</p>
+              <p className="ml-1">{text.shippingAddress}</p>
               <input
-                placeholder="Shipping Address"
+                placeholder={text.shippingAddress}
                 className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
                 onChange={handleAddressChange}
               ></input>
@@ -120,9 +131,9 @@ export default function Checkout() {
               )}
             </div>
             <div className="relevant">
-              <p className="ml-1">Phone Number</p>
+              <p className="ml-1">{text.phoneNumber}</p>
               <input
-                placeholder="Phone Number"
+                placeholder={text.phoneNumber}
                 className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
                 onChange={handlePhoneNumberChange}
               ></input>
@@ -140,7 +151,7 @@ export default function Checkout() {
                 py-2 shadow-md hover:bg-green-100 transition-colors duration-300 text-xl active:text-neutral-400"
               onClick={handleClick}
             >
-              Place Order
+              {text.placeOrderButton}
             </div>
           </Link>
         </div>
@@ -152,9 +163,8 @@ export default function Checkout() {
           </div>
           <div className="text-2xl mt-10 text-center ">
             <p>
-              Your order has been received, {""}
-              <span id="name-text">{fullName}</span>. Thank you for your
-              purchase.
+              {text.textPart1} {""}
+              <span id="name-text">{fullName}</span>. {text.textPart2}
             </p>
           </div>
           <div className="flex items-center justify-center mt-10 gap-2 dark:text-orange-50">
@@ -168,7 +178,7 @@ export default function Checkout() {
               href="/"
               className="inline-block active:text-neutral-400 transition-colors duration-300"
             >
-              <p className="inline-block text-lg">Back to Home Page</p>
+              <p className="inline-block text-lg">{text.backToHome}</p>
             </Link>
           </div>
         </div>

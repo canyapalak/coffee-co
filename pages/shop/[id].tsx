@@ -7,10 +7,12 @@ import Link from "next/link";
 import { CartContext } from "@/app/contexts/CartContext";
 import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "@/app/contexts/LanguageContext";
+import { translations } from "@/app/utils/translations";
 
 export default function ProductDetail({ product }: { product: Product }) {
   const [isInCart, setIsInCart] = useState(false);
-  const { text, language } = useContext(LanguageContext);
+  const { text } = useContext(LanguageContext);
+  const [language, setLanguage] = useState<Language>("en");
   const cartContext = useContext(CartContext);
   const [quantity, setQuantity] = useState(0);
   const [cartStatus, setCartStatus] = useState("");
@@ -37,7 +39,7 @@ export default function ProductDetail({ product }: { product: Product }) {
     addToCart(product);
     setIsInCart(true);
     setQuantity(quantity + 1);
-    setCartStatus("Added to Cart");
+    setCartStatus(translations[language].addedtoCart);
     const timer = setTimeout(() => {
       setCartStatus("");
     }, 800);
@@ -52,7 +54,7 @@ export default function ProductDetail({ product }: { product: Product }) {
       deleteFromCart(product);
       setIsInCart(false);
       setQuantity(quantity - 1);
-      setCartStatus("Removed to Cart");
+      setCartStatus(translations[language].removedFromCart);
       const timer = setTimeout(() => {
         setCartStatus("");
       }, 800);
@@ -62,7 +64,7 @@ export default function ProductDetail({ product }: { product: Product }) {
     } else {
       removeFromCart(product);
       setQuantity(quantity - 1);
-      setCartStatus("Removed from Cart");
+      setCartStatus(translations[language].removedFromCart);
       const timer = setTimeout(() => {
         setCartStatus("");
       }, 800);
@@ -82,7 +84,7 @@ export default function ProductDetail({ product }: { product: Product }) {
         <div className="md:w-2/6 m-auto relative overflow-hidden">
           <Image
             src={product.img}
-            alt={product.name.en}
+            alt={product.name[language]}
             width={200}
             height={250}
             className="mr-auto ml-auto w-44 h-72 duration-500 
@@ -106,8 +108,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           <p className="text-lg mt-2">{product.gr} gr</p>
           <p className="text-lg mt-2">{product.price}€</p>
           <p className="mt-2 text-sm" id="lime-text">
-            IN STOCK
-            {/* {text.inStock} */}
+            {text.inStock}
           </p>
           <br />
           <p>{product.text[language]}</p>
@@ -130,7 +131,11 @@ export default function ProductDetail({ product }: { product: Product }) {
                 <p>+</p>
               </div>
               <div className="italic text-md text-neutral-500 dark:text-neutral-100">
-                {cartStatus}
+                {cartStatus === "Added to Cart"
+                  ? translations[language].addedtoCart
+                  : cartStatus === "Removed from Cart"
+                  ? translations[language].removedFromCart
+                  : ""}
               </div>
             </div>
           ) : (
@@ -141,7 +146,7 @@ export default function ProductDetail({ product }: { product: Product }) {
               inline-block cursor-pointer active:text-neutral-400"
               onClick={() => handleAddToCart(product)}
             >
-              <p className="text-base">Add to Cart</p>
+              <p className="text-base">{text.addToCart}</p>
             </div>
           )}
         </div>
@@ -154,7 +159,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           href="/shop"
           className="inline-block active:text-neutral-400 transition-colors duration-300"
         >
-          <p className="inline-block text-lg">Back to Products</p>
+          <p className="inline-block text-lg">{text.backToProducts}</p>
         </Link>
       </div>
     </div>

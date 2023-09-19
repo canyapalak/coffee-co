@@ -137,7 +137,7 @@ export default function Navbar() {
                   href="/"
                   className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600 dark:hover:text-neutral-300"
                 >
-                  Home
+                  {text.home}
                 </Link>
               </div>
               <div className="md:border-0 md:p-0 hover:text-stone-600 dark:hover:text-neutral-300">
@@ -146,7 +146,7 @@ export default function Navbar() {
                   href="/policy"
                   className=" py-2 pl-3 pr-4 hover:text-stone-600 dark:hover:text-neutral-300 flex flex-row "
                 >
-                  3F
+                  {text.threeF}
                   <Image src={leaf} alt="Leaf" className="w-6 h-6" />
                 </Link>
               </div>
@@ -156,7 +156,7 @@ export default function Navbar() {
                   href="/shop"
                   className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600 dark:hover:text-neutral-300"
                 >
-                  Shop
+                  {text.shop}
                 </Link>
               </div>
               <div>

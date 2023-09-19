@@ -5,8 +5,10 @@ import { CartContext } from "@/app/contexts/CartContext";
 import { useContext, useState } from "react";
 import Link from "next/link";
 import { BsArrowLeft } from "react-icons/bs";
+import { LanguageContext } from "@/app/contexts/LanguageContext";
 
 export default function CartPage() {
+  const { text } = useContext(LanguageContext);
   const [language, setLanguage] = useState<Language>("en");
   const cartContext = useContext(CartContext);
   const { cart } = useContext(CartContext) || { cart: [] };
@@ -30,9 +32,7 @@ export default function CartPage() {
     <div className="text-lg min-h-screen">
       {isCartEmpty ? (
         <div className="flex flex-col gap-6 items-center mx-auto mt-10">
-          <p className="text-xl dark:text-orange-50">
-            Your Shopping Cart is empty.
-          </p>
+          <p className="text-xl dark:text-orange-50">{text.cartEmpty}</p>
           <Link href="/shop">
             <div
               id="main-button"
@@ -40,16 +40,14 @@ export default function CartPage() {
             hover:bg-green-100 transition-colors duration-300 inline-block mt-3 text-lg mx-auto
             active:text-neutral-400 dark:bg-stone-300"
             >
-              Start Shopping
+              {text.shoppingButton}
             </div>
           </Link>
         </div>
       ) : (
         <div className="flex flex-col gap-8 ">
           <div className="flex flex-col mx-auto items-center mt-10">
-            <p className="text-xl mb-5 dark:text-orange-50">
-              Your Shopping Cart
-            </p>
+            <p className="text-xl mb-5 dark:text-orange-50">{text.cartTitle}</p>
             <div
               className="bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-300 dark:to-stone-400 
               rounded-xl shadow-xl px-4 lg:px-14 py-4 border-stone-300 border-[1px]"
@@ -109,9 +107,9 @@ export default function CartPage() {
               <div className="flex flex-col mx-auto items-center gap-8">
                 <div className="flex flex-row gap-36 md:gap-96 mt-10">
                   <div className="flex flex-col text-left gap-3">
-                    <p className="">Subtotal:</p>
-                    <p className="">Shipping:</p>
-                    <p className="text-2xl mt-6">Total:</p>
+                    <p className="">{text.subtotal}:</p>
+                    <p className="">{text.shipping}:</p>
+                    <p className="text-2xl mt-6">{text.total}:</p>
                   </div>
                   <div className="flex flex-col text-right gap-3">
                     <p>{subtotal}€</p>
@@ -130,7 +128,7 @@ export default function CartPage() {
                     className="border-[1px] border-neutral-700 rounded-xl items-center bg-neutral-50 dark:bg-stone-300 px-10 
                 py-2 shadow-md hover:bg-green-100 transition-colors duration-300 text-xl active:text-neutral-400 mb-6"
                   >
-                    Checkout
+                    {text.checkoutButton}
                   </div>
                 </Link>
               </div>
@@ -147,7 +145,7 @@ export default function CartPage() {
               href="/shop"
               className="inline-block active:text-neutral-400 transition-colors duration-300"
             >
-              <p className="inline-block text-lg">Continue Shopping</p>
+              <p className="inline-block text-lg">{text.continueShopping}</p>
             </Link>
           </div>
         </div>
