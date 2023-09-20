@@ -1,6 +1,6 @@
 import "tailwindcss/tailwind.css";
 import Image from "next/image";
-import { Language, Product } from "@/app/types";
+import { Product } from "@/app/types";
 import { CartContext } from "@/app/contexts/CartContext";
 import { useContext, useState } from "react";
 import Link from "next/link";
@@ -8,8 +8,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import { LanguageContext } from "@/app/contexts/LanguageContext";
 
 export default function CartPage() {
-  const { text } = useContext(LanguageContext);
-  const [language, setLanguage] = useState<Language>("en");
+  const { text, language } = useContext(LanguageContext);
   const cartContext = useContext(CartContext);
   const { cart } = useContext(CartContext) || { cart: [] };
   const addToCart = cartContext?.addToCart || (() => {});

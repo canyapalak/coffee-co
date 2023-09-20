@@ -1,5 +1,5 @@
 import { products } from "@/public/assets/data/Products";
-import { Language, Product } from "@/app/types/index";
+import { Product } from "@/app/types/index";
 import intenseIcon from "@/public/assets/images/intense-icon.png";
 import { BsArrowLeft } from "react-icons/bs";
 import Image from "next/image";
@@ -11,8 +11,7 @@ import { translations } from "@/app/utils/translations";
 
 export default function ProductDetail({ product }: { product: Product }) {
   const [isInCart, setIsInCart] = useState(false);
-  const { text } = useContext(LanguageContext);
-  const [language, setLanguage] = useState<Language>("en");
+  const { text, language } = useContext(LanguageContext);
   const cartContext = useContext(CartContext);
   const [quantity, setQuantity] = useState(0);
   const [cartStatus, setCartStatus] = useState("");

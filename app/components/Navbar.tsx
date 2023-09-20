@@ -77,7 +77,7 @@ export default function Navbar() {
       <div className="mb-24 text-xl max-w-screen flex flex-wrap items-center justify-between mx-auto py-2">
         {/* LOGO AND LANGUAGE & DARK MODE */}
         <div className="flex flex-row gap-3 md:gap-7 lg:gap-10 mt-1">
-          <div>
+          <div className="mt-1">
             {isDark ? (
               <Link href="/">
                 <Image
@@ -192,7 +192,6 @@ export default function Navbar() {
           lg:space-x-8 space-x-3 items-center dark:text-orange-50"
           >
             <div>
-              <hr className="border-1 border-lime-900 dark:border-lime-200 md:border-0" />
               <Link
                 href="/"
                 className="block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600 dark:hover:text-neutral-300"

@@ -4,13 +4,11 @@ import intenseIcon from "@/public/assets/images/intense-icon.png";
 import Image from "next/image";
 import Link from "next/link";
 import Spinner from "@/app/components/Spinner";
-import { Language } from "@/app/types";
 import { useContext, useState } from "react";
 import { LanguageContext } from "@/app/contexts/LanguageContext";
 
 export default function Shop({}) {
-  const { text } = useContext(LanguageContext);
-  const [language, setLanguage] = useState<Language>("en");
+  const { text, language } = useContext(LanguageContext);
   function showIntensity(intensity: number) {
     return Array.from({ length: intensity }, (_, index) => (
       <Image
