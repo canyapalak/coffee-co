@@ -14,11 +14,23 @@ import deIcon from "@/public/assets/images/de01.png";
 import { HiMoon, HiSun } from "react-icons/hi";
 
 export default function Navbar() {
-  const { text, language, handleChangeLanguage } = useContext(LanguageContext);
+  const { text, language, handleChangeLanguage, flag } =
+    useContext(LanguageContext);
   const { cart } = useContext(CartContext) || { cart: [] };
   const isCartEmpty = cart ? cart.length === 0 : true;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setisDark] = useState(false);
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+
+  const handleLanguageChange = (selectedLanguage: any) => {
+    handleChangeLanguage(selectedLanguage);
+    toggleDropdown(); // Close the dropdown after selecting a language
+  };
 
   function handleModeClick() {
     setisDark(!isDark);
@@ -83,6 +95,41 @@ export default function Navbar() {
               />
             </Link>
           )}
+          <div className="language-dropdown w-10 h-8">
+            <div className="selected-language" onClick={toggleDropdown}>
+              <img
+                src={flag}
+                alt={language}
+                className="flag w-6 h-4 mb-2 cursor-pointer ml-[7.5px]"
+              />
+            </div>
+            {isDropdownOpen && (
+              <div className="dropdown-options border-[1px] rounded-lg border-neutral-400 bg-orange-50 p-1">
+                <div
+                  className={`option ${language === "en" ? "selected" : ""}`}
+                  onClick={() => handleLanguageChange("en")}
+                >
+                  <img
+                    src={
+                      "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695206737/en01_bsfg9g.png"
+                    }
+                    alt="en"
+                    className="flag hover:bg-neutral-300 rounded-md p-1 cursor-pointer"
+                  />
+                </div>
+                <div
+                  className={`option ${language === "de" ? "selected" : ""}`}
+                  onClick={() => handleLanguageChange("de")}
+                >
+                  <img
+                    src="https://res.cloudinary.com/djlyhp6vr/image/upload/v1695206732/de01_h5qg1v.png"
+                    alt="de"
+                    className="flag hover:bg-neutral-300 rounded-md p-1 cursor-pointer"
+                  />
+                </div>
+              </div>
+            )}
+          </div>
 
           <button
             onClick={toggleMenu}
@@ -118,20 +165,6 @@ export default function Navbar() {
             id="navbar-default"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-3 md:flex-row md:space-x-8 items-center dark:text-orange-50">
-              <div>
-                <select
-                  className="p-1 border border-neutral-500 rounded"
-                  value={language}
-                  onChange={(e: any) => handleChangeLanguage(e.target.value)}
-                >
-                  <option value="en" id="en-flag" className="w-7 h-6">
-                    🇬🇧
-                  </option>
-                  <option value="de" id="de-flag" className="w-7 h-6">
-                    🇩🇪
-                  </option>
-                </select>
-              </div>
               <div>
                 {isDark ? (
                   <HiSun

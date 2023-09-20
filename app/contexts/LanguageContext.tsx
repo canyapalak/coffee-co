@@ -33,7 +33,7 @@ export const LanguageProvider = ({
         setText(translations.en);
         setCountry("United States");
         setFlag(
-          "https://cdn3.iconfinder.com/data/icons/142-mini-country-flags-16x16px/32/flag-usa2x.png"
+          "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695206737/en01_bsfg9g.png"
         );
         break;
       }
@@ -42,7 +42,7 @@ export const LanguageProvider = ({
         setText(translations.de);
         setCountry("Germany");
         setFlag(
-          "https://cdn3.iconfinder.com/data/icons/142-mini-country-flags-16x16px/32/flag-germany2x.png"
+          "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695206732/de01_h5qg1v.png"
         );
         break;
 
@@ -58,7 +58,7 @@ export const LanguageProvider = ({
         setText(translations.en);
         setCountry("United States");
         setFlag(
-          "https://cdn3.iconfinder.com/data/icons/142-mini-country-flags-16x16px/32/flag-usa2x.png"
+          "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695206737/en01_bsfg9g.png"
         );
         break;
 
@@ -67,7 +67,7 @@ export const LanguageProvider = ({
         setText(translations.de);
         setCountry("Germany");
         setFlag(
-          "https://cdn3.iconfinder.com/data/icons/142-mini-country-flags-16x16px/32/flag-germany2x.png"
+          "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695206732/de01_h5qg1v.png"
         );
         break;
 
@@ -75,7 +75,7 @@ export const LanguageProvider = ({
         setLanguage("en");
         setText(translations.en);
         setFlag(
-          "https://cdn3.iconfinder.com/data/icons/142-mini-country-flags-16x16px/32/flag-usa2x.png"
+          "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695206737/en01_bsfg9g.png"
         );
         break;
     }

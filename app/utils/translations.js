@@ -68,7 +68,7 @@ export const translations = {
     shop: "Einkaufen",
     //HOMEPAGE
     slideText:
-      "Die besten Kaffeesorten aus der ganzen Welt, professionelle Röstung und ein außergewöhnliches Geschmackserlebnis. Treten Sie ein in die Welt von Coffee-Co und begleiten Sie uns auf dieser geschmacklichen Reise.",
+      "Die besten Kaffeesorten aus der ganzen Welt und ein außergewöhnliches Geschmackserlebnis. Treten Sie ein in die Welt von Coffee-Co und begleiten Sie uns auf dieser Reise.",
     ethiopia: "Äthiopien",
     brazil: "Brasilien",
     peru: "Peru",
