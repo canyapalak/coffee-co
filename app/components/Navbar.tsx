@@ -9,10 +9,12 @@ import logo2 from "@/public/assets/images/logo002.png";
 import leaf from "@/public/assets/images/leaf2.png";
 import cartIcon from "@/public/assets/images/cart.png";
 import cartIcon2 from "@/public/assets/images/cart2.png";
+import enIcon from "@/public/assets/images/en01.png";
+import deIcon from "@/public/assets/images/de01.png";
 import { HiMoon, HiSun } from "react-icons/hi";
 
 export default function Navbar() {
-  const { text } = useContext(LanguageContext);
+  const { text, language, handleChangeLanguage } = useContext(LanguageContext);
   const { cart } = useContext(CartContext) || { cart: [] };
   const isCartEmpty = cart ? cart.length === 0 : true;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -85,7 +87,7 @@ export default function Navbar() {
           <button
             onClick={toggleMenu}
             type="button"
-            className="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-lime-900 dark:text-neutral-50
+            className="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-neutral-800 dark:text-neutral-50
             rounded-xl md:hidden focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:bg-neutral-50 
             focus:bg-opacity-40 mt-3"
             aria-controls="navbar-default"
@@ -93,7 +95,7 @@ export default function Navbar() {
           >
             <svg
               className={` w-5 h-5 ${
-                isMenuOpen ? " text-lime-900 dark:text-neutral-50" : ""
+                isMenuOpen ? " text-neutral-800 dark:text-neutral-50" : ""
               }`}
               aria-hidden="true"
               fill="none"
@@ -116,6 +118,20 @@ export default function Navbar() {
             id="navbar-default"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-3 md:flex-row md:space-x-8 items-center dark:text-orange-50">
+              <div>
+                <select
+                  className="p-1 border border-neutral-500 rounded"
+                  value={language}
+                  onChange={(e: any) => handleChangeLanguage(e.target.value)}
+                >
+                  <option value="en" id="en-flag" className="w-7 h-6">
+                    🇬🇧
+                  </option>
+                  <option value="de" id="de-flag" className="w-7 h-6">
+                    🇩🇪
+                  </option>
+                </select>
+              </div>
               <div>
                 {isDark ? (
                   <HiSun

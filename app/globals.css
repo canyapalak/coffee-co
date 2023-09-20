@@ -60,6 +60,15 @@ background-color:antiquewhite;
   animation: rotation 1.5s infinite linear;
 }
 
+#en-flag {
+  background-image: "/public/assets/images/en01.png";;
+}
+
+#de-flag {
+  background-image: "/public/assets/images/de01.png";
+  ;
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
