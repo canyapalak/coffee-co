@@ -31,7 +31,6 @@ export const LanguageProvider = ({
       case "en": {
         setLanguage("en");
         setText(translations.en);
-        setCountry("United States");
         setFlag(
           "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695206737/en01_bsfg9g.png"
         );
@@ -40,7 +39,6 @@ export const LanguageProvider = ({
       case "de":
         setLanguage("de");
         setText(translations.de);
-        setCountry("Germany");
         setFlag(
           "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695206732/de01_h5qg1v.png"
         );

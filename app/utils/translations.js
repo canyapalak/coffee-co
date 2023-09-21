@@ -57,7 +57,7 @@ export const translations = {
     addressRequired: "Address is required",
     numberRequired: "Phone Number is required",
     //CONFIRMATION
-    backToHome: "Back to Home Page",
+    backToHome: "Back to Homepage",
     textPart1: "Your order has been received,",
     textPart2: "Thank you for your purchase.",
   },
@@ -117,7 +117,7 @@ export const translations = {
     addressRequired: "Adresse ist erforderlich",
     numberRequired: "Telefonnummer ist erforderlich",
     //CONFIRMATION
-    backToHome: "Zurück zur Hauptseite",
+    backToHome: "Zurück zur Startseite",
     textPart1: "Ihre Bestellung ist eingegangen,",
     textPart2: "Vielen Dank für Ihren Einkauf.",
   },

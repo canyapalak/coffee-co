@@ -8,6 +8,7 @@ import { useContext } from "react";
 
 export default function Policy() {
   const { text } = useContext(LanguageContext);
+
   return (
     <div>
       <div

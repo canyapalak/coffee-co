@@ -130,11 +130,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                 <p>+</p>
               </div>
               <div className="italic text-md text-neutral-500 dark:text-neutral-100">
-                {cartStatus === "Added to Cart"
-                  ? translations[language].addedtoCart
-                  : cartStatus === "Removed from Cart"
-                  ? translations[language].removedFromCart
-                  : ""}
+                {cartStatus}
               </div>
             </div>
           ) : (

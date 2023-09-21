@@ -13,6 +13,7 @@ import { useContext } from "react";
 
 export default function Home() {
   const { text } = useContext(LanguageContext);
+
   return (
     <div>
       <div className="flex flex-col gap-16">

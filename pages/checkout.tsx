@@ -27,10 +27,12 @@ export default function Checkout() {
   const deleteFromCart = cartContext?.deleteFromCart || (() => {});
   const { cart } = useContext(CartContext) || { cart: [] };
 
+  // CLEAR CART TO REMOVE NUMBER ON CART ICON
   const clearCart = () => {
     cart.forEach((product) => deleteFromCart(product));
   };
 
+  // INPUT VALIDATION
   const handleClick = () => {
     setFullNameError(
       fullName === "" ? translations[language].fullNameRequired : ""
@@ -99,7 +101,7 @@ export default function Checkout() {
                 onChange={handleFullNameChange}
               ></input>
               {fullNameError && (
-                <p className="text-sm text-red-500 absolute pl-1">
+                <p className="text-sm text-red-500 dark:text-orange-400 absolute pl-1">
                   {fullNameError}
                 </p>
               )}
@@ -112,7 +114,7 @@ export default function Checkout() {
                 onChange={handleEMailChange}
               ></input>
               {eMailError && (
-                <p className="text-sm text-red-500 absolute pl-1">
+                <p className="text-sm text-red-500 dark:text-orange-400 absolute pl-1">
                   {eMailError}
                 </p>
               )}
@@ -125,7 +127,7 @@ export default function Checkout() {
                 onChange={handleAddressChange}
               ></input>
               {addressError && (
-                <p className="text-sm text-red-500 absolute pl-1">
+                <p className="text-sm text-red-500 dark:text-orange-400 absolute pl-1">
                   {addressError}
                 </p>
               )}
@@ -138,7 +140,7 @@ export default function Checkout() {
                 onChange={handlePhoneNumberChange}
               ></input>
               {phoneNumberError && (
-                <p className="text-sm text-red-500 absolute pl-1">
+                <p className="text-sm text-red-500 dark:text-orange-400 absolute pl-1">
                   {phoneNumberError}
                 </p>
               )}

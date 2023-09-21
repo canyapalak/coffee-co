@@ -9,6 +9,8 @@ import { LanguageContext } from "@/app/contexts/LanguageContext";
 
 export default function Shop({}) {
   const { text, language } = useContext(LanguageContext);
+
+  // SHOW ICONS INSTEAD OF INTENSITY NUMBER
   function showIntensity(intensity: number) {
     return Array.from({ length: intensity }, (_, index) => (
       <Image
@@ -21,6 +23,7 @@ export default function Shop({}) {
       />
     ));
   }
+
   return (
     <div className="flex flex-col md:flex-row flex-wrap gap-8 text-lg">
       <Spinner />
