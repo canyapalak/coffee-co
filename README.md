@@ -21,6 +21,11 @@ Coffee-Co provides a range of features to enhance the user's shopping experience
 - **Shipping Fee:** A pricing model that offers free shipping on orders exceeding 100 euros.
 
 - **Responsive Design:** Coffee-Co is fully responsive, ensuring a seamless experience on all devices, from desktops to mobile phones.
+
+- **Dark Mode:** The navigation bar allows users to choose between two mode options, including a dark mode which changes all colors accordingly.
+
+- **Language Selection:** The navigation bar allows users to change language of the whole application to German or back to English.
+
 </p>
   
 <h2>Technologies used</h2>
