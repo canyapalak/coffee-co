@@ -95,7 +95,7 @@ export default function Checkout() {
               <p className="ml-1">{text.fullName}</p>
               <input
                 placeholder={text.fullName}
-                className="w-72 md:w-96 h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md "
+                className="w-72 md:w-96 h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md dark:text-neutral-900"
                 onChange={handleFullNameChange}
               ></input>
               {fullNameError && (
@@ -108,7 +108,7 @@ export default function Checkout() {
               <p className="ml-1">{text.eMail}</p>
               <input
                 placeholder={text.eMail}
-                className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
+                className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md dark:text-neutral-900"
                 onChange={handleEMailChange}
               ></input>
               {eMailError && (
@@ -121,7 +121,7 @@ export default function Checkout() {
               <p className="ml-1">{text.shippingAddress}</p>
               <input
                 placeholder={text.shippingAddress}
-                className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
+                className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md dark:text-neutral-900"
                 onChange={handleAddressChange}
               ></input>
               {addressError && (
@@ -134,7 +134,7 @@ export default function Checkout() {
               <p className="ml-1">{text.phoneNumber}</p>
               <input
                 placeholder={text.phoneNumber}
-                className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md"
+                className="w-72 md:w-96  h-9 px-2 border-[1px] border-neutral-400 rounded-md shadow-md dark:text-neutral-900"
                 onChange={handlePhoneNumberChange}
               ></input>
               {phoneNumberError && (
