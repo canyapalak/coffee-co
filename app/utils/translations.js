@@ -89,7 +89,7 @@ export const translations = {
       "Unser Engagement für Freundlichkeit geht über unseren Kundenservice hinaus. Wir sehen unsere Kunden als Teil unserer Familie. Wir möchten eine warme und einladende Umgebung schaffen, in der Sie sich geschätzt und willkommen fühlen. Ganz gleich, ob Sie eine Frage zu unseren Produkten haben, Tipps zur Zubereitung benötigen oder einfach nur über Ihre Kaffeevorlieben plaudern möchten, unser Team ist für Sie da. Wir glauben an die Förderung einer freundlichen und integrativen Kaffeegemeinschaft",
     freshnessText:
       "Frische ist für uns nicht verhandelbar. Wir wissen, dass frische Produkte eine entscheidende Rolle für die Qualität Ihres Kaffees spielen. Deshalb rösten wir unsere Bohnen in kleinen Chargen, um sicherzustellen, dass jede Tüte Kaffee, die Sie erhalten, dank ihrer Frische vor Geschmack nur so strotzt. Wir sind bestrebt, Ihnen die Kaffeebohnen zu ihrem besten Zeitpunkt zu liefern, damit Sie bei jedem Schluck die reichhaltigen und aromatischen Noten genießen können.",
-    closingTexT:
+    closingText:
       "Danke, dass Sie sich für Coffee-Co entschieden haben, wo jede Tasse eine Geschichte von Qualität, Ethik und Gemeinschaft erzählt. Nippen, schmecken und genießen!", //SHOP PAGE
     inStock: "AUF LAGER",
     //PRODUCT PAGE
