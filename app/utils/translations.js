@@ -98,8 +98,8 @@ export const translations = {
     addedtoCart: "In den Warenkorb gelegt",
     removedFromCart: "Aus dem Warenkorb entfernt",
     //CART
-    cartEmpty: "Ihr Einkaufswagen ist leer.",
-    cartTitle: "Ihr Einkaufswagen",
+    cartEmpty: "Ihr Warenkorb ist leer.",
+    cartTitle: "Ihr Warenkorb",
     continueShopping: "Einkauf fortsetzen",
     subtotal: "Zwischensumme",
     shipping: "Versand",
