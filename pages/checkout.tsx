@@ -22,15 +22,8 @@ export default function Checkout() {
   const [eMailError, setEMailError] = useState("");
   const [addressError, setAddressError] = useState("");
   const [phoneNumberError, setPhoneNumberError] = useState("");
-
   const cartContext = useContext(CartContext);
-  const deleteFromCart = cartContext?.deleteFromCart || (() => {});
-  const { cart } = useContext(CartContext) || { cart: [] };
-
-  // CLEAR CART TO REMOVE NUMBER ON CART ICON
-  const clearCart = () => {
-    cart.forEach((product) => deleteFromCart(product));
-  };
+  const clearCart = cartContext?.clearCart || (() => {});
 
   // INPUT VALIDATION
   const handleClick = () => {

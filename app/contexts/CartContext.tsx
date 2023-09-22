@@ -60,9 +60,14 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     setCart(filteredCart);
   };
 
+  // CLEARING THE ENTIRE CART
+  const clearCart = () => {
+    setCart([]);
+  };
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, deleteFromCart }}
+      value={{ cart, addToCart, removeFromCart, deleteFromCart, clearCart }}
     >
       {children}
     </CartContext.Provider>

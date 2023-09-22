@@ -23,6 +23,7 @@ export interface CartContextType {
   addToCart: (product: Product) => void;
   removeFromCart: (product: Product) => void;
   deleteFromCart: (product: Product) => void;
+  clearCart: () => void;
 }
 
 export type Language = "en" | "de";
