@@ -234,7 +234,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   href="/cart"
-                  className="relative block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-stone-600 dark:hover:text-neutral-300"
+                  className="relative block py-2 pl-3 pr-4 mt-1.5 md:border-0 md:p-0 hover:text-stone-600 dark:hover:text-neutral-300"
                 >
                   <div className="relative inline-block">
                     {isDark ? (
