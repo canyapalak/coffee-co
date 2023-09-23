@@ -95,8 +95,8 @@ export const translations = {
     //PRODUCT PAGE
     addToCart: "In den Warenkorb legen",
     backToProducts: "Zurück zu den Produkten",
-    addedtoCart: "In den Warenkorb gelegt",
-    removedFromCart: "Aus dem Warenkorb entfernt",
+    addedtoCart: "In den Korb gelegt",
+    removedFromCart: "Aus dem Korb entfernt",
     //CART
     cartEmpty: "Ihr Warenkorb ist leer.",
     cartTitle: "Ihr Warenkorb",
