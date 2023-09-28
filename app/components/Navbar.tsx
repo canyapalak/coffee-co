@@ -131,6 +131,16 @@ export default function Navbar() {
                       className="flag hover:bg-neutral-300 rounded-md p-1 cursor-pointer"
                     />
                   </div>
+                  <div
+                    className={`option ${language === "tr" ? "selected" : ""}`}
+                    onClick={() => handleLanguageChange("tr")}
+                  >
+                    <img
+                      src="https://res.cloudinary.com/djlyhp6vr/image/upload/v1695908900/turkey-flag2-removebg-preview_ebvp8s.png"
+                      alt="de"
+                      className="flag hover:bg-neutral-300 rounded-md p-1 cursor-pointer"
+                    />
+                  </div>
                 </div>
               )}
             </div>

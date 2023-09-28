@@ -3,6 +3,7 @@ export interface Product {
   name: {
     en: string;
     de: string;
+    tr: string;
   };
   gr: number;
   img: string;
@@ -11,6 +12,7 @@ export interface Product {
   text: {
     en: string;
     de: string;
+    tr: string;
   };
   qty: number;
 }
@@ -26,4 +28,4 @@ export interface CartContextType {
   clearCart: () => void;
 }
 
-export type Language = "en" | "de";
+export type Language = "en" | "de" | "tr";

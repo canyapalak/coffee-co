@@ -127,4 +127,67 @@ export const translations = {
     textPart1: "Ihre Bestellung ist eingegangen,",
     textPart2: "Vielen Dank für Ihren Einkauf.",
   },
+  tr: {
+    //NAVBAR
+    home: "Ana Sayfa",
+    threeF: "3F",
+    shop: "Mağaza",
+    //HOMEPAGE
+    slideText:
+      "Dünyanın dört bir yanından gelen, profesyonelce kavrulmuş kahve çekirdekleri ve olağanüstü bir lezzet deneyimi. Coffee-Co dünyasına adım atın ve bu yolculukta bize katılın.",
+    ethiopia: "Etiyopya",
+    brazil: "Brezilya",
+    peru: "Peru",
+    companyButton: "Şirketi Tanıyın",
+    beansButton: "Kahve Çekirdeklerimiz",
+    policyButton: "Politikamız",
+    shoppingButton: "Alışverişe Başlayın",
+    policyText:
+      "3F Politikamızı okuyun ve yalnızca kahve değil, üç temel değerimizi esas alan eksiksiz bir deneyim sunma konusunda ne kadar tutkulu olduğumuzu görün.",
+    shippingText:
+      "Avrupa'nın her noktasına teslimat yapıyoruz. En güzel tarafı da 100€ üzeri siparişlerinizde kargonuz ücretsiz. Gerçek kahve severler kahvelerini stoklar.", //POLICY
+    titleText: "3F Nedir?",
+    introText:
+      "Coffee-Co'da sadece kahve değil, size üç temel değerimizi esas alan tam bir deneyim sunma konusunda da tutkuluyuz: Adil (Fair), Dostça (Friendly) ve Taze (Fresh). Bu ilkeler, size dünyanın dört bir yanından gelen en iyi kahveleri sunma taahhüdümüzün temelini oluşturur.",
+    fairTitle: "ADİL",
+    fairText:
+      "Kahvenin sadece harika bir lezzete sahip olması değil, dünyada iyilik için bir güç olması gerektiğine de inanıyoruz. Bu nedenle kahve çekirdeklerimizi adil ticaret uygulamalarıyla tedarik ediyoruz. Dünyanın farklı köşelerindeki kahve çiftçileriyle doğrudan çalışarak, emeklerinin karşılığını adilce almalarını sağlıyoruz. Coffee-Co'yu seçerek siz de daha adil bir kahve endüstrisini desteklemiş olursunuz.",
+    friendlyTitle: "DOSTÇA",
+    friendlyText:
+      "Güleryüzlülüğe olan bağlılığımız müşteri hizmetlerimizin değişmez bir parçasıdır. Müşterilerimizi ailemizin bir parçası olarak görüyor, değer verildiğinizi ve takdir edildiğinizi hissedeceğiniz sıcak ve davetkar bir marka yaratmak istiyoruz. İster ürünlerimiz hakkında bir sorunuz olsun, isterseniz sadece kahve çeşitlerimiz hakkında sohbet etmek isteyin, ekibimiz sizin için burada. Herkesi kapsayan dostane bir kahve topluluğu oluşturmak, en büyük arzumuz.",
+    freshTitle: "TAZE",
+    freshText:
+      "Bizim için tazelik tartışılmaz bir konudur. Taze ürünlerin kahvenizin kalitesinde oynadığı önemli rolün farkındayız. Bu nedenle aldığınız her paket kahvenin lezzetle dolu olmasını sağlamak için çekirdeklerimizi küçük partiler halinde kavuruyoruz. Kahvenizden aldığınız her yudumda zengin ve aromatik tatların keyfini çıkarabilmeniz için kahve çekirdeklerini en iyi zamanda size teslim etmeye kararlıyız.",
+    closingText:
+      "Her paketi kalite ve iyilikle hazırlayan Coffee-Co'yu tercih ettiğiniz için teşekkür ederiz. Kahvenizden bir yudum alın ve keyfini çıkarın!", //SHOP PAGE
+    inStock: "STOKTA VAR",
+    //PRODUCT PAGE
+    addToCart: "Sepete Ekle",
+    backToProducts: "Ürünlere Geri Dön",
+    addedtoCart: "Sepete Eklendi",
+    removedFromCart: "Sepetten Çıkarıldı",
+    //CART
+    cartEmpty: "Alışveriş Sepetiniz boş.",
+    cartTitle: "Alışveriş Sepetiniz",
+    continueShopping: "Alışverişe Devam Edin",
+    subtotal: "Ara Toplam",
+    shipping: "Kargo",
+    total: "Toplam",
+    checkoutButton: "Satın Al",
+    //CHECKOUT
+    checkoutTitle: "Siparişinizi Tamamlayın",
+    fullName: "Ad & Soyad",
+    eMail: "E-Posta",
+    shippingAddress: "Teslimat Adresi",
+    phoneNumber: "Telefon Numarası",
+    placeOrderButton: "Siparişi Tamamla",
+    fullNameRequired: "Ad & Soyad gerekiyor",
+    eMailRequired: "E-Posta gerekiyor",
+    addressRequired: "Adres gerekiyor",
+    numberRequired: "Telefon Numarası gerekiyor",
+    //CONFIRMATION
+    backToHome: "Ana Sayfaya Geri Dön",
+    textPart1: "Siparişiniz alındı,",
+    textPart2: "Alışverişiniz için teşekkür ederiz.",
+  },
 };

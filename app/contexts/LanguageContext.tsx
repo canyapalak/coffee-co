@@ -4,8 +4,8 @@ import { Language } from "../types";
 
 export const LanguageContext = createContext<{
   text: Record<string, string>;
-  language: "en" | "de";
-  handleChangeLanguage: (language: "en" | "de") => void;
+  language: "en" | "de" | "tr";
+  handleChangeLanguage: (language: "en" | "de" | "tr") => void;
   flag: string;
   setFlag: React.Dispatch<React.SetStateAction<string>>;
 }>({
@@ -43,6 +43,14 @@ export const LanguageProvider = ({
           "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695206732/de01_h5qg1v.png"
         );
         break;
+      case "tr": {
+        setLanguage("tr");
+        setText(translations.tr);
+        setFlag(
+          "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695908900/turkey-flag2-removebg-preview_ebvp8s.png"
+        );
+        break;
+      }
 
       default:
         break;
@@ -66,6 +74,15 @@ export const LanguageProvider = ({
         setCountry("Germany");
         setFlag(
           "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695206732/de01_h5qg1v.png"
+        );
+        break;
+
+      case "tr":
+        setLanguage("tr");
+        setText(translations.tr);
+        setCountry("Turkey");
+        setFlag(
+          "https://res.cloudinary.com/djlyhp6vr/image/upload/v1695908900/turkey-flag2-removebg-preview_ebvp8s.png"
         );
         break;
 
