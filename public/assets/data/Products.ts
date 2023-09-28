@@ -6,6 +6,7 @@ export const products: Product[] = [
     name: {
       en: "'Dark Horse' – Brazil",
       de: "'Dark Horse' – Brasilien",
+      tr: "'Dark Horse' – Brezilya",
     },
     gr: 250,
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545733/pack06-removebg-preview_b2msec.png",
@@ -15,6 +16,7 @@ export const products: Product[] = [
     text: {
       en: "Indulge in the bold and robust flavors of our Dark Horse blend sourced from the lush coffee plantations of Brazil. This exquisite coffee offers a rich, full-bodied taste with subtle hints of cocoa and nuts. It's perfect for those who crave a deep and satisfying coffee experience.",
       de: "Genießen Sie die kräftigen und robusten Aromen unserer Dark Horse, die aus den üppigen Kaffeeplantagen Brasiliens stammt. Dieser exquisite Kaffee bietet einen reichen, vollmundigen Geschmack mit subtilen Noten von Kakao und Nüssen. Er ist perfekt für alle, die sich nach einem intensiven und befriedigenden Kaffeeerlebnis sehnen.",
+      tr: "Brezilya'nın yemyeşil kahve tarlalarından elde edilen Dark Horse harmanımızın cesur ve güçlü tatlarının keyfini çıkarın. Bu enfes kahve, kakao ve fındığın hafif dokunuşlarıyla zengin, tam gövdeli bir tat sunar. Derin ve tatmin edici bir kahve deneyimi isteyenler için mükemmel bir tercihtir.",
     },
   },
   {
@@ -22,6 +24,7 @@ export const products: Product[] = [
     name: {
       en: "'Windy Day' – Colombia",
       de: "'Windy Day' – Kolumbien",
+      tr: "'Windy Day' – Kolombiya",
     },
     gr: 250,
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545733/pack02-removebg-preview_hgzei1.png",
@@ -31,6 +34,7 @@ export const products: Product[] = [
     text: {
       en: "Embark on a journey to the heart of Colombia with our Windy Day blend. This coffee boasts bright acidity and a delightful fruitiness, reminiscent of rainforest paradise. With its vibrant flavor profile, it's the ideal choice for those seeking a taste of exotic adventure in every cup.",
       de: "Begeben Sie sich mit unserer Windy Day auf eine Reise in das Herz Kolumbiens. Dieser Kaffee zeichnet sich durch eine helle Säure und eine herrliche Fruchtigkeit aus, die an das Paradies im Regenwald erinnert. Mit seinem lebendigen Geschmacksprofil ist er die ideale Wahl für alle, die in jeder Tasse einen Hauch von exotischem Abenteuer erleben möchten.",
+      tr: "Windy Day kahvemizle Kolombiya'nın kalbine doğru bir yolculuğa çıkın. Bu kahve, sahip olduğu asililik oranı ve enfes meyvemsi tadıyla  cennetten düşmüş bir yağmur ormanını anımsatır. Canlı aromalar ve  egzotik bir tat arayanlar için ideal seçimdir. Her fincanda yeni bir macera isteyenlere...",
     },
   },
   {
@@ -38,6 +42,7 @@ export const products: Product[] = [
     name: {
       en: "'Morning Bliss' – Ethiopia",
       de: "'Morning Bliss' – Äthiopien",
+      tr: "'Morning Bliss' – Etiyopya",
     },
     gr: 250,
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545732/pack01-removebg-preview_hl0p4s.png",
@@ -47,6 +52,7 @@ export const products: Product[] = [
     text: {
       en: "Start your day with the ethereal flavors of Morning Bliss, a coffee blend straight from the highlands of Ethiopia. Known for its bright citrus notes and floral undertones, this coffee is like a morning symphony for your taste buds, providing a refreshing and invigorating start to your day.",
       de: "Beginnen Sie Ihren Tag mit den ätherischen Aromen von Morning Bliss, einer Kaffeemischung direkt aus dem Hochland von Äthiopien. Bekannt für seine leuchtenden Zitrusnoten und blumigen Untertöne, ist dieser Kaffee wie eine morgendliche Symphonie für Ihre Geschmacksnerven und sorgt für einen erfrischenden und belebenden Start in den Tag.",
+      tr: "Etiyopya'nın dağlık bölgelerinden gelen bir kahve olan Morning Bliss'in ruhani lezzetiyle güne başlayın. Belirgin narenciye notaları ve çiçeksi alt tonlarıyla bilinen bu kahve, damak tadınıza bir sabah senfonisi gibi gelecek, size güne başlamanızı kolaylaştıracak canlandırıcı ve ferahlatıcı bir his verecek.",
     },
   },
   {
@@ -54,6 +60,7 @@ export const products: Product[] = [
     name: {
       en: "'Ancient Forest' – Honduras",
       de: "'Ancient Forest' – Honduras",
+      tr: "'Ancient Forest' – Honduras",
     },
     gr: 250,
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545733/pack03-removebg-preview_vlsddd.png",
@@ -63,6 +70,7 @@ export const products: Product[] = [
     text: {
       en: "Discover tranquility in a cup with our Ancient Forest blend, originating from the thick rainforests of Honduras. This coffee offers a unique combination of spiciness and earthiness, creating a harmonious blend that soothes the soul. It's a true peace stop of flavor amidst the chaos of your day.",
       de: "Entdecken Sie die Ruhe in einer Tasse mit unserer Ancient Forest, die aus den dichten Regenwäldern von Honduras stammt. Dieser Kaffee bietet eine einzigartige Kombination aus Schärfe und Erdigkeit, die eine harmonische Mischung ergibt, die die Seele beruhigt. Er ist ein wahrer Ruhepol inmitten des täglichen Chaos.",
+      tr: "Honduras'ın sık yağmur ormanlarından gelen Ancient Forest ile tek bir fincanda huzuru keşfedin. Bu kahve, baharat ve topraksı aromaların  eşsiz bir kombinasyonunu sunarak ruhunuzu dinlendiren ahenkli bir birleşim oluşturur. Gündelik hayatın koşturmasında gerçek bir huzur durağıdır.",
     },
   },
   {
@@ -70,6 +78,7 @@ export const products: Product[] = [
     name: {
       en: "'Golden Harvest' – Peru",
       de: "'Golden Harvest' – Peru",
+      tr: "'Golden Harvest' – Peru",
     },
     gr: 250,
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545733/pack04-removebg-preview_u2h0yj.png",
@@ -79,6 +88,7 @@ export const products: Product[] = [
     text: {
       en: "Delight in the golden treasures of the Peruvian coffee fields with our Golden Harvest blend. This medium-roast coffee features a smooth and balanced profile with subtle notes of caramel and nuts. It's a comforting and reliable choice for coffee enthusiasts.",
       de: "Erfreuen Sie sich an den goldenen Schätzen der peruanischen Kaffeefelder mit unserer Golden Harvest. Dieser mittelstark geröstete Kaffee hat ein weiches und ausgewogenes Profil mit subtilen Noten von Karamell und Nüssen. Er ist eine angenehme und zuverlässige Wahl für Kaffeeliebhaber.",
+      tr: "Golden Harvest ile Peru kahve tarlalarının altın hazinelerinin keyfini çıkarın. Bu orta kavrulmuş kahve, hafif karamel ve fındık notaları içeren pürüzsüz ve dengeli bir profile sahiptir. Her türden kahve tutkunu için rahatlatıcı ve güvenilir bir seçimdir.",
     },
   },
   {
@@ -86,6 +96,7 @@ export const products: Product[] = [
     name: {
       en: "'African Spice' – Kenya",
       de: "'African Spice' – Kenia",
+      tr: "'African Spice' – Kenya",
     },
     gr: 250,
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545733/pack05-removebg-preview_fr8r3s.png",
@@ -95,6 +106,7 @@ export const products: Product[] = [
     text: {
       en: "Experience the vibrant and spicy flavors of Africa with our African Spice blend, sourced exclusively from Kenya. This coffee boasts a lively acidity and bold flavors of black currant and spices. It's a true celebration of African coffee culture.",
       de: "Erleben Sie die lebendigen und würzigen Aromen Afrikas mit unserer African Spice, die ausschließlich aus Kenia bezogen wird. Dieser Kaffee zeichnet sich durch eine lebendige Säure und kräftige Aromen von schwarzen Johannisbeeren und Gewürzen aus. Er ist eine wahre Feier der afrikanischen Kaffeekultur.",
+      tr: "Kenya'dan özel olarak elde edilen African Spice ile Afrika'nın canlı ve baharatlı lezzetlerini deneyimleyin. Bu kahve, canlı bir asiditeye ve siyah frenk üzümü ve baharatlardan oluşan cesur tatlara sahiptir. Bu kahve, Afrika kahve kültürünün gerçek bir temsilidir.",
     },
   },
   {
@@ -102,6 +114,7 @@ export const products: Product[] = [
     name: {
       en: "'Coffee-Co Legacy' – Blend",
       de: "'Coffee-Co Legacy' – Mischung",
+      tr: "'Coffee-Co Legacy' – Harman",
     },
     gr: 300,
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545734/pack08-removebg-preview_qqdka3.png",
@@ -111,6 +124,7 @@ export const products: Product[] = [
     text: {
       en: "Our Coffee-Co Legacy blend is a carefully crafted masterpiece that brings together beans from various regions. This complex blend offers a well-rounded flavor profile with hints of chocolate, caramel, and a touch of citrus. It's a crowd-pleaser that caters to a wide range of coffee preferences.",
       de: "Unsere Coffee-Co Legacy-Mischung ist ein sorgfältig hergestelltes Meisterwerk, das Bohnen aus verschiedenen Regionen zusammenbringt. Diese komplexe Mischung bietet ein abgerundetes Geschmacksprofil mit Noten von Schokolade, Karamell und einem Hauch von Zitrusfrüchten. Sie ist ein Publikumsliebling, der eine breite Palette von Kaffeevorlieben anspricht.",
+      tr: "Coffee-Co Legacy harmanımız, çeşitli bölgelerden gelen çekirdekleri bir araya getiren özenle hazırlanmış bir şaheserdir. Bu kahve karışımı, çikolata, karamel ve bir miktar narenciye dokunuşuyla çok yönlü bir lezzet profili sunar. Farklı kahve türlerini sevenlere hitap etmesiyle herkesi memnun edecek bir kahvedir.",
     },
   },
   {
@@ -118,6 +132,7 @@ export const products: Product[] = [
     name: {
       en: "'Coffee-Co Decaf' – Blend",
       de: "'Coffee-Co Decaf' – Mischung",
+      tr: "'Coffee-Co Decaf' – Harman",
     },
     gr: 300,
     img: "https://res.cloudinary.com/djlyhp6vr/image/upload/v1694545734/pack07-removebg-preview_wiipkc.png",
@@ -127,6 +142,7 @@ export const products: Product[] = [
     text: {
       en: "For those who prefer to savor the rich taste of coffee without the caffeine, our Coffee-Co Decaf blend is the perfect choice. It retains the same exceptional flavor profile as our regular special blend, with the added benefit of being caffeine-free. Enjoy the warmth and comfort of coffee anytime, day or night, without the jolt.",
       de: "Für alle, die den vollen Kaffeegeschmack ohne Koffein genießen möchten, ist unsere Coffee-Co Decaf-Mischung die perfekte Wahl. Sie hat das gleiche außergewöhnliche Geschmacksprofil wie unsere reguläre Spezialmischung, mit dem zusätzlichen Vorteil, dass sie koffeinfrei ist. Genießen Sie die Wärme und den Komfort von Kaffee zu jeder Tages- und Nachtzeit, ohne den Schock.",
+      tr: "Kahvenin zengin tadını kafeinsiz tatmayı tercih edenler için Coffee-Co Decaf mükemmel bir seçimdir. Standart özel harmanımızla aynı olağanüstü lezzet profilini korurken, kafein içermeme avantajını da sahiptir. Kahvenin sıcaklığının ve konforunun keyfini gece gündüz, istediğiniz zaman, sorunsuzca çıkarın.",
     },
   },
 ];
