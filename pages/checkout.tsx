@@ -7,12 +7,9 @@ import Image from "next/image";
 import { CartContext } from "@/app/contexts/CartContext";
 import Spinner from "@/app/components/Spinner";
 import { LanguageContext } from "@/app/contexts/LanguageContext";
-import { translations } from "@/app/utils/translations";
-import { Language } from "@/app/types";
 
 export default function Checkout() {
   const { text } = useContext(LanguageContext);
-  const [language, setLanguage] = useState<Language>("en");
   const [showCheckout, setShowCheckout] = useState<boolean>(true);
   const [fullName, setFullName] = useState<string>("");
   const [eMail, setEMail] = useState<string>("");
@@ -27,16 +24,10 @@ export default function Checkout() {
 
   // INPUT VALIDATION
   const handleClick = () => {
-    setFullNameError(
-      fullName === "" ? translations[language].fullNameRequired : ""
-    );
-    setEMailError(eMail === "" ? translations[language].eMailRequired : "");
-    setAddressError(
-      address === "" ? translations[language].addressRequired : ""
-    );
-    setPhoneNumberError(
-      phoneNumber === "" ? translations[language].numberRequired : ""
-    );
+    setFullNameError(fullName === "" ? text.fullNameRequired : "");
+    setEMailError(eMail === "" ? text.eMailRequired : "");
+    setAddressError(address === "" ? text.addressRequired : "");
+    setPhoneNumberError(phoneNumber === "" ? text.numberRequired : "");
 
     if (
       fullName === "" ||
