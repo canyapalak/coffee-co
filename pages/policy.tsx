@@ -24,6 +24,7 @@ export default function Policy() {
         <div className="flex flex-col md:flex-row gap-10">
           <div className="md:w-2/6">
             <Image src={fair} alt="Fair" className="mx-auto w-16 h-16 mb-4" />
+            <p className="text-center mb-2">{text.fairTitle}</p>
             <p>{text.fairText}</p>
             <br />
           </div>
@@ -33,12 +34,14 @@ export default function Policy() {
               alt="Friendly"
               className="mx-auto w-16 h-16 mb-4"
             />
+            <p className="text-center mb-2">{text.friendlyTitle}</p>
             <p>{text.friendlyText}</p>
             <br />
           </div>
           <div className="md:w-2/6">
             <Image src={fresh} alt="Fresh" className="mx-auto w-16 h-16 mb-4" />
-            <p>{text.freshnessText}</p>
+            <p className="text-center mb-2">{text.freshTitle}</p>
+            <p>{text.freshText}</p>
             <br />
           </div>
         </div>
