@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <div
       className="px-12 md:px-24 flex flex-col gap-8 md:gap-0 md:flex-row align-middle items-center 
-      mb-0 mt-auto top-auto w-screen
+      mb-0 mt-auto top-auto w-full
        bg-stone-700 py-10 sticky text-stone-50"
     >
       <div className="flex-col">
